@@ -219,8 +219,8 @@ Planned next steps include:
 
 ## Author
 
-**Yoav Neman**  
-Industrial Engineering and Analytics Project
+**Yoav Nesher**  
+Industrial Engineering and Management
 
 ## License
 
