@@ -1,0 +1,12 @@
+pandas
+numpy
+openpyxl
+scikit-learn
+joblib
+matplotlib
+networkx
+pyyaml
+faker
+statsmodels
+fastapi
+uvicorn

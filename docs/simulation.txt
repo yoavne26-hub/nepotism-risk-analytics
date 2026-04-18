@@ -1,0 +1,402 @@
+The project becomes a production company workforce simulation under 3 HR regimes:
+
+Merit-based
+Moderate favoritism
+High nepotism risk
+
+And the simulation uses:
+
+hiring model
+promotion / raise model
+nepotism network score
+anomaly detection
+
+Then compares:
+
+production over time
+turnover
+salary growth
+anomalies
+nepotism concentration
+
+That’s a much stronger OR project than just “detect nepotism.”
+
+Clean project logic
+Phase A — Build the models
+
+These are not the simulation yet.
+
+1. Hiring model
+
+Input: candidates
+Output: probability or score of being selected
+
+Used for:
+
+selecting the first 100 employees from top 2,000 candidates
+selecting replacements later from rows 2001 onward
+2. Promotion / raise model
+
+Input: employees after working and producing
+Output: who gets promotion / raise
+
+Used for:
+
+selecting the 20% who get what they want after the 3-month review points
+3. Network nepotism score
+
+Input: employees / managers / ties
+Output: manager- and department-level nepotism risk
+
+Used for:
+
+reporting
+later maybe influencing promotion decisions in favoritism scenarios
+4. Anomaly model
+
+Input: aggregates by manager / department / month
+Output: anomaly scores
+
+Used for:
+
+reporting
+showing suspicious clusters under favoritism scenarios
+Phase B — Build the simulation engine
+
+This is the part you just described.
+
+Your simulation design, organized cleanly
+Initial hiring
+Take the top 2,000 candidates
+Use the hiring model to select 100 employees
+The selection behavior changes by scenario
+
+Important detail:
+“top 2,000” should mean either:
+
+first 2,000 rows by candidate pool order, or better:
+top 2,000 by application batch / ranking / merit shortlist
+
+I recommend:
+
+keep the first 2,000 as the initial labor market pool
+but let the hiring model decide who gets hired from that pool
+Production simulation
+
+Each employee gets a competence / productivity potential
+based on:
+
+merit
+performance
+maybe role level
+maybe experience
+
+Then simulate monthly production.
+
+Best production formula
+
+Do not make production equal only to performance.
+Make it something like:
+
+𝑝
+𝑟
+𝑜
+𝑑
+𝑢
+𝑐
+𝑡
+𝑖
+𝑜
+𝑛
+𝑖
+,
+𝑡
+=
+𝑏
+𝑎
+𝑠
+𝑒
+_
+𝑝
+𝑟
+𝑜
+𝑑
+𝑢
+𝑐
+𝑡
+𝑖
+𝑣
+𝑖
+𝑡
+𝑦
+𝑖
+×
+𝑟
+𝑜
+𝑙
+𝑒
+_
+𝑚
+𝑢
+𝑙
+𝑡
+𝑖
+𝑝
+𝑙
+𝑖
+𝑒
+𝑟
+𝑖
+×
+𝑚
+𝑜
+𝑟
+𝑎
+𝑙
+𝑒
+𝑡
+×
+𝑛
+𝑜
+𝑖
+𝑠
+𝑒
+𝑡
+production
+i,t
+	​
+
+=base_productivity
+i
+	​
+
+×role_multiplier
+i
+	​
+
+×morale
+t
+	​
+
+×noise
+t
+	​
+
+
+Where base_productivity_i is correlated with:
+
+candidate test/interview/GPA
+employee performance
+experience
+
+That makes production more realistic.
+
+Review every 3 months
+
+Every 3 months:
+
+identify top production employees
+20% of them want either:
+promotion
+salary raise
+
+I’d formalize that as:
+
+Demand side
+
+Top 20% of producers enter a “reward-demand pool”
+
+Each one gets:
+
+request_type = raise or promotion
+Reward allocation
+
+Then your promotion / raise model chooses who gets rewarded.
+
+You said:
+
+the model we create will choose 20% to raise their salary
+
+I’d make this slightly more structured:
+
+top producers demanding reward = candidate pool for reward
+model ranks them
+a capped percentage get promotion / raise
+others do not
+
+This is better than random selection.
+
+Quitting rule
+
+Employees who did not receive what they wanted quit.
+
+That is harsh, but analytically very useful because it amplifies the scenario differences.
+
+So after every review cycle:
+
+unmet demand → quit
+number of quitters opens vacancies
+hiring model fills vacancies from candidates starting at row 2001 onward
+Replacement hiring
+
+Use:
+
+remaining candidate pool
+hiring model again
+scenario-specific behavior again
+
+That makes turnover endogenous to the scenario.
+
+Simulation length
+monthly production
+24 months total
+review cycle every 3 months
+8 review events
+
+Perfectly reasonable.
+
+What changes across the 3 scenarios
+
+This is the heart of the simulation.
+
+1. Merit-based
+Hiring
+merit dominates
+connection has weak effect
+Promotions / raises
+driven mostly by performance and tenure
+little or no favoritism
+Outcomes expected
+better long-run production
+lower unfair turnover
+lower anomaly score
+weaker nepotism network concentration
+2. Moderate favoritism
+Hiring
+mix of merit and connection
+Promotions / raises
+performance still matters, but connected employees get some edge
+Outcomes expected
+decent short-term production
+moderate anomaly concentration
+some productive employees quit after being passed over
+moderate network clustering
+3. High nepotism risk
+Hiring
+connection dominates a large share of decisions
+Promotions / raises
+close family / school / city ties heavily influence rewards
+weaker employees can be protected
+Outcomes expected
+lower long-run production
+more quitting among productive non-connected workers
+more churn
+stronger anomaly signals
+stronger nepotism clusters
+
+This is nicely aligned with your sources: connected selection can produce lower competence and lower organizational performance, especially where discretion is high.
+
+What the simulation should output
+
+At the end, you want a strong comparison package.
+
+Monthly outputs
+
+For each month and scenario:
+
+headcount
+total production
+production per employee
+average performance
+average salary
+cumulative quits
+cumulative hires
+number of promotions
+number of raises
+Final scenario comparison
+
+At end of 24 months:
+
+total production
+average monthly production
+average productivity per employee
+turnover rate
+share of top producers who quit
+salary cost
+production per salary dollar
+anomaly score summary
+network nepotism score summary
+Visuals
+
+Best charts:
+
+production over time by scenario
+headcount over time by scenario
+turnover over time by scenario
+cumulative quits over time
+average salary over time
+anomaly score by manager / department
+nepotism network graph
+
+That will make the differences very visible.
+
+What data we need before simulation
+
+Because now we know the full simulation logic, the database must support it.
+
+Core tables needed before simulation
+1. Candidates
+
+Need:
+
+merit features
+connection features
+application pool order or availability status
+2. Employees
+
+Need:
+
+performance
+salary
+role level
+manager / department
+3. Jobs
+
+Need:
+
+role structure
+department / manager ownership
+whether a vacancy exists
+4. Managers
+
+Need:
+
+city / school / college
+family clusters
+department
+5. Optional: employee monthly state table
+
+This can be generated during the simulation, not necessarily stored initially.
+
+Important modeling improvement
+
+For your simulation, promotion and salary raise should probably be one reward model, not two completely separate ones at first.
+
+I’d call it:
+
+Reward allocation model
+
+Input:
+
+production in last period
+performance
+tenure
+connection features
+scenario
+
+Output:
+
+reward decision:
+no reward
+salary raise
+promotion

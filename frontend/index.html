@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nepotism Risk Analytics</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="top-bar">
+      <div class="logo">
+        <div class="logo-icon">NR</div>
+        <div class="logo-text">
+          <span class="logo-title">Nepotism Risk Analytics</span>
+          <span class="logo-subtitle">HR Analytics Platform</span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <button class="nav-btn active" data-view="home">Dashboard</button>
+        <button class="nav-btn" data-view="hiring">Hiring</button>
+        <button class="nav-btn" data-view="promotion">Promotion</button>
+        <button class="nav-btn" data-view="data-summary">Data</button>
+        <button class="nav-btn" data-view="risk-dashboard">Risk</button>
+        <button class="nav-btn" data-view="statistical-analysis">Statistics</button>
+        <button class="nav-btn" data-view="organizational-impact">Impact</button>
+      </nav>
+      <div class="header-status">
+        <span class="status-indicator"></span>
+        Live
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div id="home-view" class="page-view active"></div>
+      <div id="hiring-view" class="page-view"></div>
+      <div id="promotion-view" class="page-view"></div>
+      <div id="data-summary-view" class="page-view"></div>
+      <div id="risk-dashboard-view" class="page-view"></div>
+      <div id="statistical-analysis-view" class="page-view"></div>
+      <div id="organizational-impact-view" class="page-view"></div>
+    </main>
+  </div>
+
+  <div class="page-loader" id="page-loader">
+    <div class="loader-spinner"></div>
+    <span>Loading...</span>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

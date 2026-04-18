@@ -1,0 +1,4 @@
+scenario,total_promoted,anomaly_count,anomaly_rate,average_anomaly_score,median_anomaly_score
+High nepotism risk,19,11,0.5789473684210527,0.2572310526315789,0.271025
+Merit-based,12,1,0.08333333333333333,0.07397991666666666,0.052461
+Moderate favoritism,15,0,0.0,0.09726166666666666,0.096837

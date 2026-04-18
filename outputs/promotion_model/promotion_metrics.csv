@@ -1,0 +1,7 @@
+model,display_name,layer,class_weight,calibrated,roc_auc,precision,recall,f1,brier_score,avg_predicted_probability_test,avg_predicted_probability_all
+balanced_compact,Balanced Compact Logistic,compact,balanced,False,0.6711502782931354,0.125,0.6428571428571429,0.20930232558139536,0.22772596866995695,0.43652426842882097,0.4168840855977547
+calibrated_compact,Calibrated Compact Logistic,compact,none,True,0.6614100185528757,0.0,0.0,0.0,0.0731923548861558,0.0891329849796774,0.08489626023293166
+unweighted_compact,Unweighted Compact Logistic,compact,none,False,0.6651205936920223,0.0,0.0,0.0,0.07283157849924367,0.08840293668976457,0.08396216384353661
+balanced_explanatory,Balanced Explanatory Logistic,explanatory,balanced,False,0.6711502782931354,0.125,0.6428571428571429,0.20930232558139536,0.22772596866995695,0.43652426842882097,0.4168840855977547
+calibrated_explanatory,Calibrated Explanatory Logistic,explanatory,none,True,0.6614100185528757,0.0,0.0,0.0,0.0731923548861558,0.0891329849796774,0.08489626023293166
+unweighted_explanatory,Unweighted Explanatory Logistic,explanatory,none,False,0.6651205936920223,0.0,0.0,0.0,0.07283157849924367,0.08840293668976457,0.08396216384353661

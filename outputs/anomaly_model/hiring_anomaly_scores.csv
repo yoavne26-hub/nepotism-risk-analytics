@@ -1,0 +1,559 @@
+company_id,scenario,employee_id,candidate_id,full_name,merit_score,connection_index,discretionary_channel,hiring_anomaly_score,hiring_threshold,hiring_anomaly_flag
+MOD-08,Moderate favoritism,EMOD0800260,CMOD0800260,Noam Dahan,59.4,0.667,legacy_referral,0.83375,0.369519,1
+HNR-15,High nepotism risk,EHNR1500339,CHNR1500339,Shira Levi,62.3,0.676,legacy_referral,0.784667,0.369519,1
+HNR-07,High nepotism risk,EHNR0700306,CHNR0700306,Dana Katz,65.8,0.739,family,0.778167,0.369519,1
+HNR-10,High nepotism risk,EHNR1000231,CHNR1000231,Lihi Biton,65.8,0.685,legacy_referral,0.721305,0.369519,1
+HNR-07,High nepotism risk,EHNR0700117,CHNR0700117,David Levi,67.2,0.686,legacy_referral,0.692774,0.369519,1
+MOD-11,Moderate favoritism,EMOD1100190,CMOD1100190,Yarden Berkowitz,70.8,0.694,legacy_referral,0.623906,0.369519,1
+HNR-09,High nepotism risk,EHNR0900018,CHNR0900018,Roee Biton,70.2,0.679,legacy_referral,0.622983,0.369519,1
+HNR-01,High nepotism risk,EHNR0100227,CHNR0100227,Gal Ohayon,73.4,0.727,family,0.595413,0.369519,1
+HNR-16,High nepotism risk,EHNR1600207,CHNR1600207,Ori Peretz,71.9,0.685,legacy_referral,0.592611,0.369519,1
+HNR-16,High nepotism risk,EHNR1600155,CHNR1600155,Yael Dahan,79.5,0.899,family,0.567381,0.369519,1
+HNR-03,High nepotism risk,EHNR0300062,CHNR0300062,Noam Peretz,68.5,0.58,legacy_referral,0.562528,0.369519,1
+HNR-12,High nepotism risk,EHNR1200036,CHNR1200036,Roni Malka,69.9,0.591,legacy_referral,0.547709,0.369519,1
+HNR-05,High nepotism risk,EHNR0500101,CHNR0500101,Alon Mizrahi,70.3,0.597,legacy_referral,0.545882,0.369519,1
+HNR-13,High nepotism risk,EHNR1300013,CHNR1300013,Ori Haddad,62.3,0.468,legacy_referral,0.543231,0.369519,1
+MOD-06,Moderate favoritism,EMOD0600221,CMOD0600221,Tamar Shapiro,79.4,0.826,family,0.52389,0.369519,1
+MOD-16,Moderate favoritism,EMOD1600020,CMOD1600020,Yair Cohen,75.0,0.678,legacy_referral,0.521891,0.369519,1
+HNR-07,High nepotism risk,EHNR0700201,CHNR0700201,Ariel Malka,72.0,0.581,legacy_referral,0.500895,0.369519,1
+HNR-08,High nepotism risk,EHNR0800214,CHNR0800214,Ori Cohen,70.9,0.549,alumni_network,0.491835,0.369519,1
+MOD-04,Moderate favoritism,EMOD0400046,CMOD0400046,Neta Biton,68.7,0.508,alumni_network,0.489522,0.369519,1
+HNR-04,High nepotism risk,EHNR0400120,CHNR0400120,Yael Biton,66.4,0.47,legacy_referral,0.486215,0.369519,1
+MOD-02,Moderate favoritism,EMOD0200098,CMOD0200098,Amit Biton,76.5,0.672,legacy_referral,0.486192,0.369519,1
+MOD-12,Moderate favoritism,EMOD1200172,CMOD1200172,Omer Dahan,73.2,0.575,legacy_referral,0.474447,0.369519,1
+HNR-16,High nepotism risk,EHNR1600149,CHNR1600149,Yael Dahan,71.2,0.535,legacy_referral,0.474411,0.369519,1
+MOD-13,Moderate favoritism,EMOD1300060,CMOD1300060,Yair Malka,67.1,0.468,legacy_referral,0.474026,0.369519,1
+HNR-02,High nepotism risk,EHNR0200272,CHNR0200272,Daniel Dahan,79.2,0.735,family,0.470676,0.369519,1
+HNR-11,High nepotism risk,EHNR1100311,CHNR1100311,Daniel Dahan,81.8,0.831,family,0.465672,0.369519,1
+MER-06,Merit-based,EMER0600142,CMER0600142,Shira Malka,69.7,0.499,legacy_referral,0.465505,0.369519,1
+HNR-02,High nepotism risk,EHNR0200061,CHNR0200061,Ido Ben-David,79.3,0.73,family,0.465284,0.369519,1
+MOD-10,Moderate favoritism,EMOD1000070,CMOD1000070,Noa Dahan,79.7,0.741,family,0.463125,0.369519,1
+HNR-08,High nepotism risk,EHNR0800002,CHNR0800002,David Shapiro,78.0,0.68,legacy_referral,0.460615,0.369519,1
+HNR-02,High nepotism risk,EHNR0200021,CHNR0200021,Omer Friedman,61.8,0.388,legacy_referral,0.456336,0.369519,1
+HNR-06,High nepotism risk,EHNR0600238,CHNR0600238,Shira Shapiro,68.9,0.476,legacy_referral,0.45577,0.369519,1
+HNR-15,High nepotism risk,EHNR1500029,CHNR1500029,Ariel Biton,74.4,0.577,legacy_referral,0.454748,0.369519,1
+MOD-03,Moderate favoritism,EMOD0300055,CMOD0300055,Noam Biton,75.6,0.59,legacy_referral,0.443237,0.369519,1
+MOD-11,Moderate favoritism,EMOD1100259,CMOD1100259,Yonatan Berkowitz,69.7,0.464,alumni_network,0.432854,0.369519,1
+MOD-10,Moderate favoritism,EMOD1000284,CMOD1000284,David Peretz,62.2,0.368,legacy_referral,0.42826,0.369519,1
+MOD-08,Moderate favoritism,EMOD0800151,CMOD0800151,Nadav Levi,73.4,0.508,alumni_network,0.416052,0.369519,1
+HNR-15,High nepotism risk,EHNR1500066,CHNR1500066,Amit Mizrahi,68.4,0.42,manager_endorsement,0.408608,0.369519,1
+HNR-13,High nepotism risk,EHNR1300215,CHNR1300215,David Peretz,77.5,0.588,legacy_referral,0.407337,0.369519,1
+HNR-10,High nepotism risk,EHNR1000167,CHNR1000167,Roee Cohen,77.7,0.592,legacy_referral,0.406482,0.369519,1
+MOD-13,Moderate favoritism,EMOD1300122,CMOD1300122,Einav Cohen,77.6,0.58,legacy_referral,0.399982,0.369519,1
+HNR-03,High nepotism risk,EHNR0300249,CHNR0300249,Ariel Friedman,79.3,0.615,family,0.391986,0.369519,1
+HNR-13,High nepotism risk,EHNR1300088,CHNR1300088,Ido Amar,73.4,0.474,legacy_referral,0.388206,0.369519,1
+HNR-10,High nepotism risk,EHNR1000293,CHNR1000293,Michal Ben-David,73.9,0.471,legacy_referral,0.378507,0.369519,1
+HNR-02,High nepotism risk,EHNR0200326,CHNR0200326,Shahar Ben-David,83.7,0.751,family,0.376908,0.369519,1
+MER-13,Merit-based,EMER1300262,CMER1300262,Ariel Friedman,66.8,0.368,legacy_referral,0.376142,0.369519,1
+HNR-10,High nepotism risk,EHNR1000155,CHNR1000155,Roni Mizrahi,68.3,0.38,legacy_referral,0.37088,0.369519,1
+HNR-16,High nepotism risk,EHNR1600068,CHNR1600068,Amit Biton,79.3,0.581,legacy_referral,0.370315,0.369519,1
+MER-12,Merit-based,EMER1200008,CMER1200008,Ofir Peretz,67.7,0.37,legacy_referral,0.367965,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600109,CMOD1600109,Neta Peretz,68.8,0.383,legacy_referral,0.367919,0.369519,0
+MOD-07,Moderate favoritism,EMOD0700126,CMOD0700126,Tamar Dahan,68.4,0.375,legacy_referral,0.364828,0.369519,0
+HNR-13,High nepotism risk,EHNR1300184,CHNR1300184,Moran Cohen,68.6,0.376,legacy_referral,0.363498,0.369519,0
+MOD-13,Moderate favoritism,EMOD1300013,CMOD1300013,Shira Biton,80.0,0.587,legacy_referral,0.361445,0.369519,0
+MER-14,Merit-based,EMER1400061,CMER1400061,Dana Mor,75.0,0.467,legacy_referral,0.359473,0.369519,0
+MOD-12,Moderate favoritism,EMOD1200247,CMOD1200247,Daniel Amar,68.9,0.372,legacy_referral,0.35619,0.369519,0
+HNR-01,High nepotism risk,EHNR0100322,CHNR0100322,Tal Shapiro,80.6,0.585,legacy_referral,0.349391,0.369519,0
+HNR-13,High nepotism risk,EHNR1300352,CHNR1300352,Nadav Amar,75.8,0.467,legacy_referral,0.347973,0.369519,0
+MOD-03,Moderate favoritism,EMOD0300257,CMOD0300257,Roee Mizrahi,83.4,0.678,legacy_referral,0.346543,0.369519,0
+HNR-13,High nepotism risk,EHNR1300075,CHNR1300075,Tal Friedman,70.2,0.374,legacy_referral,0.343145,0.369519,0
+HNR-01,High nepotism risk,EHNR0100167,CHNR0100167,Gal Sharabi,70.6,0.377,legacy_referral,0.341232,0.369519,0
+HNR-06,High nepotism risk,EHNR0600008,CHNR0600008,Amit Mizrahi,80.0,0.554,alumni_network,0.341125,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600115,CMOD1600115,Yuval Dayan,71.0,0.381,legacy_referral,0.340185,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600063,CMOD1600063,David Katz,78.2,0.502,alumni_network,0.336905,0.369519,0
+HNR-04,High nepotism risk,EHNR0400192,CHNR0400192,Amit Sadeh,70.6,0.371,legacy_referral,0.335801,0.369519,0
+HNR-15,High nepotism risk,EHNR1500249,CHNR1500249,Michal Mizrahi,72.8,0.4,alumni_network,0.335,0.369519,0
+HNR-01,High nepotism risk,EHNR0100154,CHNR0100154,Adi Toledano,77.2,0.469,legacy_referral,0.329238,0.369519,0
+HNR-12,High nepotism risk,EHNR1200097,CHNR1200097,Shira Biton,79.2,0.514,alumni_network,0.329153,0.369519,0
+HNR-10,High nepotism risk,EHNR1000056,CHNR1000056,Daniel Biton,76.9,0.459,manager_endorsement,0.326464,0.369519,0
+HNR-13,High nepotism risk,EHNR1300049,CHNR1300049,Yael Peretz,71.4,0.37,legacy_referral,0.325785,0.369519,0
+HNR-05,High nepotism risk,EHNR0500271,CHNR0500271,Tamar Levi,63.4,0.285,legacy_referral,0.321159,0.369519,0
+MOD-14,Moderate favoritism,EMOD1400031,CMOD1400031,Lior Azoulay,82.0,0.579,legacy_referral,0.320838,0.369519,0
+HNR-13,High nepotism risk,EHNR1300171,CHNR1300171,Neta Amar,72.0,0.368,legacy_referral,0.317262,0.369519,0
+MOD-04,Moderate favoritism,EMOD0400026,CMOD0400026,Tamar Cohen,79.5,0.502,legacy_referral,0.316825,0.369519,0
+HNR-11,High nepotism risk,EHNR1100130,CHNR1100130,Yael Avraham,72.7,0.374,legacy_referral,0.314347,0.369519,0
+HNR-01,High nepotism risk,EHNR0100241,CHNR0100241,Omer Biton,72.9,0.376,legacy_referral,0.313725,0.369519,0
+HNR-14,High nepotism risk,EHNR1400218,CHNR1400218,Itay Levi,78.7,0.472,legacy_referral,0.309514,0.369519,0
+HNR-03,High nepotism risk,EHNR0300029,CHNR0300029,Omer Friedman,81.5,0.543,family,0.309306,0.369519,0
+MOD-14,Moderate favoritism,EMOD1400091,CMOD1400091,Michal Katz,73.2,0.373,legacy_referral,0.307772,0.369519,0
+HNR-07,High nepotism risk,EHNR0700134,CHNR0700134,Yair Vaknin,78.7,0.468,legacy_referral,0.306891,0.369519,0
+HNR-07,High nepotism risk,EHNR0700234,CHNR0700234,Adi Malka,73.5,0.376,legacy_referral,0.306769,0.369519,0
+HNR-13,High nepotism risk,EHNR1300288,CHNR1300288,Ariel Avraham,68.7,0.314,referral,0.302578,0.369519,0
+HNR-06,High nepotism risk,EHNR0600191,CHNR0600191,Ariel Haddad,83.0,0.574,legacy_referral,0.300417,0.369519,0
+MOD-12,Moderate favoritism,EMOD1200225,CMOD1200225,Daniel Kadosh,79.1,0.465,legacy_referral,0.299228,0.369519,0
+HNR-10,High nepotism risk,EHNR1000240,CHNR1000240,Maya Sharabi,79.9,0.482,legacy_referral,0.298298,0.369519,0
+MER-07,Merit-based,EMER0700222,CMER0700222,Yael Ohayon,73.9,0.371,legacy_referral,0.298145,0.369519,0
+HNR-06,High nepotism risk,EHNR0600200,CHNR0600200,Amit Biton,73.8,0.368,legacy_referral,0.296838,0.369519,0
+HNR-15,High nepotism risk,EHNR1500296,CHNR1500296,Noam Berkowitz,80.6,0.497,legacy_referral,0.296833,0.369519,0
+HNR-08,High nepotism risk,EHNR0800338,CHNR0800338,Ori Swisa,79.4,0.465,legacy_referral,0.294926,0.369519,0
+HNR-11,High nepotism risk,EHNR1100062,CHNR1100062,Noa Levi,68.3,0.302,alumni_network,0.294752,0.369519,0
+MOD-13,Moderate favoritism,EMOD1300238,CMOD1300238,David Cohen,68.6,0.302,alumni_network,0.291958,0.369519,0
+HNR-03,High nepotism risk,EHNR0300179,CHNR0300179,Tamar Levi,66.5,0.283,legacy_referral,0.291879,0.369519,0
+HNR-07,High nepotism risk,EHNR0700128,CHNR0700128,Yuval Mor,74.4,0.37,legacy_referral,0.291606,0.369519,0
+MER-11,Merit-based,EMER1100074,CMER1100074,Tamar Ben-David,74.5,0.368,legacy_referral,0.288926,0.369519,0
+HNR-14,High nepotism risk,EHNR1400126,CHNR1400126,Ori Mizrahi,84.4,0.59,legacy_referral,0.283348,0.369519,0
+HNR-13,High nepotism risk,EHNR1300062,CHNR1300062,Yuval Malka,75.6,0.373,legacy_referral,0.280216,0.369519,0
+HNR-15,High nepotism risk,EHNR1500260,CHNR1500260,Yair Cohen,76.0,0.378,legacy_referral,0.279295,0.369519,0
+HNR-03,High nepotism risk,EHNR0300286,CHNR0300286,Amit Malka,75.9,0.374,legacy_referral,0.277508,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000170,CMOD1000170,Einav Levi,74.4,0.346,legacy_referral,0.272691,0.369519,0
+HNR-13,High nepotism risk,EHNR1300325,CHNR1300325,Rotem Biton,82.8,0.512,alumni_network,0.271104,0.369519,0
+HNR-04,High nepotism risk,EHNR0400075,CHNR0400075,Roni Haddad,77.7,0.394,legacy_referral,0.27053,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800068,CMOD0800068,Yael Cohen,86.8,0.657,legacy_referral,0.266988,0.369519,0
+HNR-01,High nepotism risk,EHNR0100293,CHNR0100293,Nadav Dahan,76.6,0.37,legacy_referral,0.266585,0.369519,0
+HNR-05,High nepotism risk,EHNR0500185,CHNR0500185,Ariel Avraham,85.3,0.588,legacy_referral,0.266144,0.369519,0
+HNR-07,High nepotism risk,EHNR0700328,CHNR0700328,David Levi,77.4,0.382,legacy_referral,0.265824,0.369519,0
+MER-06,Merit-based,EMER0600057,CMER0600057,Eitan Levi,77.5,0.383,legacy_referral,0.265323,0.369519,0
+MOD-11,Moderate favoritism,EMOD1100070,CMOD1100070,Yael Cohen,79.0,0.41,legacy_referral,0.265065,0.369519,0
+HNR-04,High nepotism risk,EHNR0400227,CHNR0400227,David Cohen,77.0,0.374,legacy_referral,0.264839,0.369519,0
+MOD-13,Moderate favoritism,EMOD1300220,CMOD1300220,Ofir Biton,81.8,0.472,legacy_referral,0.264497,0.369519,0
+MOD-15,Moderate favoritism,EMOD1500278,CMOD1500278,Yonatan Friedman,76.9,0.371,legacy_referral,0.263874,0.369519,0
+MOD-03,Moderate favoritism,EMOD0300256,CMOD0300256,Shira Levi,77.0,0.365,legacy_referral,0.258466,0.369519,0
+HNR-15,High nepotism risk,EHNR1500015,CHNR1500015,Yonatan Friedman,83.2,0.496,legacy_referral,0.256556,0.369519,0
+HNR-16,High nepotism risk,EHNR1600038,CHNR1600038,Yarden Katz,87.8,0.68,legacy_referral,0.255425,0.369519,0
+HNR-08,High nepotism risk,EHNR0800153,CHNR0800153,Shira Shapiro,85.7,0.578,legacy_referral,0.254464,0.369519,0
+HNR-15,High nepotism risk,EHNR1500064,CHNR1500064,Hila Azoulay,80.3,0.418,manager_endorsement,0.253517,0.369519,0
+HNR-11,High nepotism risk,EHNR1100044,CHNR1100044,Eitan Gabay,78.6,0.384,legacy_referral,0.253008,0.369519,0
+HNR-09,High nepotism risk,EHNR0900312,CHNR0900312,Tal Biton,80.6,0.422,manager_endorsement,0.252039,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600144,CMOD1600144,Maya Cohen,86.2,0.592,legacy_referral,0.251526,0.369519,0
+HNR-09,High nepotism risk,EHNR0900008,CHNR0900008,Roni Dahan,83.1,0.481,legacy_referral,0.2503,0.369519,0
+MOD-15,Moderate favoritism,EMOD1500004,CMOD1500004,Eitan Dahan,75.1,0.326,internal_source,0.24992,0.369519,0
+MOD-03,Moderate favoritism,EMOD0300102,CMOD0300102,Ariel Shapiro,82.7,0.469,legacy_referral,0.249801,0.369519,0
+HNR-10,High nepotism risk,EHNR1000171,CHNR1000171,Nadav Levi,78.9,0.384,legacy_referral,0.249456,0.369519,0
+HNR-13,High nepotism risk,EHNR1300131,CHNR1300131,Gal Malka,84.3,0.51,legacy_referral,0.246521,0.369519,0
+HNR-01,High nepotism risk,EHNR0100115,CHNR0100115,Amit Levi,83.1,0.473,legacy_referral,0.246137,0.369519,0
+HNR-07,High nepotism risk,EHNR0700335,CHNR0700335,Shira Levi,73.9,0.304,referral,0.244302,0.369519,0
+MOD-04,Moderate favoritism,EMOD0400029,CMOD0400029,Nadav Gabay,87.4,0.628,legacy_referral,0.243586,0.369519,0
+MOD-02,Moderate favoritism,EMOD0200180,CMOD0200180,Noam Cohen,78.8,0.372,legacy_referral,0.242823,0.369519,0
+HNR-04,High nepotism risk,EHNR0400055,CHNR0400055,Lihi Cohen,83.6,0.48,legacy_referral,0.24234,0.369519,0
+HNR-11,High nepotism risk,EHNR1100221,CHNR1100221,David Gabay,78.7,0.369,legacy_referral,0.241972,0.369519,0
+MOD-04,Moderate favoritism,EMOD0400050,CMOD0400050,Ofir Avraham,79.1,0.376,legacy_referral,0.241956,0.369519,0
+MOD-02,Moderate favoritism,EMOD0200116,CMOD0200116,Nadav Berkowitz,79.3,0.377,legacy_referral,0.24029,0.369519,0
+HNR-08,High nepotism risk,EHNR0800310,CHNR0800310,Lihi Shapiro,81.1,0.409,manager_endorsement,0.237987,0.369519,0
+HNR-12,High nepotism risk,EHNR1200129,CHNR1200129,Noa Cohen,87.7,0.628,legacy_referral,0.237855,0.369519,0
+MER-10,Merit-based,EMER1000088,CMER1000088,Shira Azoulay,79.6,0.377,legacy_referral,0.236803,0.369519,0
+MOD-07,Moderate favoritism,EMOD0700132,CMOD0700132,Daniel Cohen,85.2,0.518,legacy_referral,0.236014,0.369519,0
+MOD-03,Moderate favoritism,EMOD0300205,CMOD0300205,Ori Turgeman,83.8,0.471,legacy_referral,0.234911,0.369519,0
+HNR-04,High nepotism risk,EHNR0400279,CHNR0400279,Omer Cohen,74.0,0.293,alumni_network,0.234546,0.369519,0
+HNR-13,High nepotism risk,EHNR1300107,CHNR1300107,Noam Dahan,79.3,0.367,legacy_referral,0.233917,0.369519,0
+HNR-02,High nepotism risk,EHNR0200241,CHNR0200241,Eitan Shapiro,81.4,0.408,manager_endorsement,0.233631,0.369519,0
+HNR-02,High nepotism risk,EHNR0200320,CHNR0200320,Eitan Mizrahi,81.7,0.412,alumni_network,0.23211,0.369519,0
+MER-01,Merit-based,EMER0100024,CMER0100024,Noam Peretz,80.2,0.378,legacy_referral,0.230438,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000160,CMOD1000160,Tamar Levi,80.0,0.374,legacy_referral,0.23029,0.369519,0
+HNR-16,High nepotism risk,EHNR1600143,CHNR1600143,Yonatan Halabi,73.1,0.278,legacy_referral,0.230254,0.369519,0
+HNR-12,High nepotism risk,EHNR1200275,CHNR1200275,Yael Malka,80.1,0.371,legacy_referral,0.227284,0.369519,0
+MOD-01,Moderate favoritism,EMOD0100072,CMOD0100072,Yarden Cohen,83.9,0.458,legacy_referral,0.227054,0.369519,0
+HNR-14,High nepotism risk,EHNR1400327,CHNR1400327,Yael Levi,80.5,0.377,legacy_referral,0.226341,0.369519,0
+HNR-08,High nepotism risk,EHNR0800131,CHNR0800131,Moran Friedman,81.1,0.388,legacy_referral,0.225768,0.369519,0
+HNR-13,High nepotism risk,EHNR1300293,CHNR1300293,David Biton,63.5,0.2,alumni_network,0.22475,0.369519,0
+MER-01,Merit-based,EMER0100010,CMER0100010,Lihi Levi,84.5,0.469,legacy_referral,0.22383,0.369519,0
+HNR-08,High nepotism risk,EHNR0800148,CHNR0800148,Daniel Haddad,80.3,0.369,legacy_referral,0.223798,0.369519,0
+HNR-10,High nepotism risk,EHNR1000260,CHNR1000260,Maya Cohen,85.9,0.515,legacy_referral,0.223574,0.369519,0
+HNR-08,High nepotism risk,EHNR0800260,CHNR0800260,Neta Cohen,82.8,0.42,manager_endorsement,0.22239,0.369519,0
+MOD-02,Moderate favoritism,EMOD0200074,CMOD0200074,Ori Malka,80.8,0.375,legacy_referral,0.221672,0.369519,0
+MER-08,Merit-based,EMER0800236,CMER0800236,Amit Levi,82.5,0.409,legacy_referral,0.220349,0.369519,0
+HNR-10,High nepotism risk,EHNR1000306,CHNR1000306,Yonatan Biton,85.4,0.484,legacy_referral,0.217558,0.369519,0
+HNR-09,High nepotism risk,EHNR0900116,CHNR0900116,Eitan Malka,85.1,0.474,legacy_referral,0.217448,0.369519,0
+MER-06,Merit-based,EMER0600212,CMER0600212,Tamar Katz,76.6,0.298,alumni_network,0.214709,0.369519,0
+HNR-15,High nepotism risk,EHNR1500191,CHNR1500191,Yair Katz,81.7,0.376,legacy_referral,0.211829,0.369519,0
+MER-04,Merit-based,EMER0400136,CMER0400136,Hila Cohen,85.3,0.467,legacy_referral,0.211376,0.369519,0
+HNR-02,High nepotism risk,EHNR0200306,CHNR0200306,Noa Sharabi,84.8,0.451,legacy_referral,0.211068,0.369519,0
+HNR-06,High nepotism risk,EHNR0600221,CHNR0600221,Ori Sasson,77.4,0.302,alumni_network,0.210154,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800197,CMOD0800197,Moran Berkowitz,76.1,0.285,legacy_referral,0.209724,0.369519,0
+MER-03,Merit-based,EMER0300252,CMER0300252,Dana Abutbul,81.8,0.371,legacy_referral,0.207899,0.369519,0
+MOD-06,Moderate favoritism,EMOD0600092,CMOD0600092,Alon Peretz,81.9,0.372,legacy_referral,0.207297,0.369519,0
+MER-10,Merit-based,EMER1000290,CMER1000290,Neta Haddad,92.5,0.896,family,0.206864,0.369519,0
+HNR-14,High nepotism risk,EHNR1400211,CHNR1400211,Roni Berkowitz,84.1,0.422,manager_endorsement,0.206569,0.369519,0
+HNR-15,High nepotism risk,EHNR1500189,CHNR1500189,Adi Vaknin,82.4,0.378,legacy_referral,0.204829,0.369519,0
+HNR-07,High nepotism risk,EHNR0700255,CHNR0700255,Amit Friedman,65.7,0.192,alumni_network,0.202752,0.369519,0
+HNR-15,High nepotism risk,EHNR1500089,CHNR1500089,Ori Mizrahi,75.8,0.27,referral,0.201184,0.369519,0
+HNR-15,High nepotism risk,EHNR1500285,CHNR1500285,Gal Mizrahi,77.9,0.294,legacy_referral,0.20003,0.369519,0
+HNR-05,High nepotism risk,EHNR0500304,CHNR0500304,Maya Dahan,82.7,0.37,legacy_referral,0.197071,0.369519,0
+MOD-05,Moderate favoritism,EMOD0500236,CMOD0500236,Shira Berkowitz,69.6,0.206,manager_endorsement,0.192816,0.369519,0
+MER-06,Merit-based,EMER0600206,CMER0600206,Roni Cohen,81.0,0.329,legacy_referral,0.192465,0.369519,0
+MOD-04,Moderate favoritism,EMOD0400251,CMOD0400251,Ofir Gabay,86.7,0.469,legacy_referral,0.192056,0.369519,0
+HNR-03,High nepotism risk,EHNR0300214,CHNR0300214,Rotem Sharabi,83.6,0.372,legacy_referral,0.187814,0.369519,0
+MER-07,Merit-based,EMER0700135,CMER0700135,Yair Sharabi,78.7,0.286,legacy_referral,0.187544,0.369519,0
+MOD-12,Moderate favoritism,EMOD1200219,CMOD1200219,Amit Dahan,83.5,0.369,legacy_referral,0.187452,0.369519,0
+MER-03,Merit-based,EMER0300097,CMER0300097,Nadav Peretz,59.6,0.15,internal_source,0.186581,0.369519,0
+MOD-15,Moderate favoritism,EMOD1500019,CMOD1500019,Neta Haddad,79.5,0.288,legacy_referral,0.181764,0.369519,0
+HNR-06,High nepotism risk,EHNR0600143,CHNR0600143,Ori Friedman,87.6,0.472,legacy_referral,0.180186,0.369519,0
+MER-14,Merit-based,EMER1400248,CMER1400248,Tomer Mizrahi,80.1,0.293,alumni_network,0.179499,0.369519,0
+HNR-04,High nepotism risk,EHNR0400176,CHNR0400176,Moran Friedman,84.4,0.373,legacy_referral,0.179133,0.369519,0
+HNR-12,High nepotism risk,EHNR1200142,CHNR1200142,Yael Cohen,84.5,0.375,legacy_referral,0.178969,0.369519,0
+HNR-04,High nepotism risk,EHNR0400274,CHNR0400274,Ori Turgeman,71.8,0.206,alumni_network,0.178859,0.369519,0
+HNR-16,High nepotism risk,EHNR1600096,CHNR1600096,Adi Shapiro,80.2,0.29,legacy_referral,0.176791,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000102,CMOD1000102,Roni Shapiro,84.7,0.374,legacy_referral,0.176154,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600230,CMOD1600230,David Cohen,88.7,0.504,alumni_network,0.175329,0.369519,0
+HNR-13,High nepotism risk,EHNR1300087,CHNR1300087,Neta Sharabi,84.9,0.377,legacy_referral,0.175258,0.369519,0
+MER-03,Merit-based,EMER0300236,CMER0300236,Assaf Amar,84.7,0.371,legacy_referral,0.174741,0.369519,0
+MER-06,Merit-based,EMER0600066,CMER0600066,Adi Abutbul,84.8,0.373,legacy_referral,0.174564,0.369519,0
+MER-06,Merit-based,EMER0600098,CMER0600098,Lior Gabay,85.3,0.384,legacy_referral,0.173808,0.369519,0
+MOD-03,Moderate favoritism,EMOD0300285,CMOD0300285,Adi Cohen,85.2,0.38,legacy_referral,0.173138,0.369519,0
+MER-16,Merit-based,EMER1600063,CMER1600063,Noam Haddad,72.7,0.205,alumni_network,0.172302,0.369519,0
+HNR-05,High nepotism risk,EHNR0500054,CHNR0500054,Eitan Peretz,84.8,0.367,legacy_referral,0.171756,0.369519,0
+MER-14,Merit-based,EMER1400193,CMER1400193,Hila Sharabi,85.2,0.374,legacy_referral,0.170404,0.369519,0
+HNR-12,High nepotism risk,EHNR1200302,CHNR1200302,Adi Friedman,67.7,0.214,none,0.170258,0.369519,0
+HNR-13,High nepotism risk,EHNR1300022,CHNR1300022,David Friedman,85.5,0.379,legacy_referral,0.169176,0.369519,0
+HNR-09,High nepotism risk,EHNR0900262,CHNR0900262,Omer Peretz,88.4,0.469,legacy_referral,0.167492,0.369519,0
+MER-06,Merit-based,EMER0600122,CMER0600122,Yair Cohen,84.2,0.341,alumni_network,0.165896,0.369519,0
+HNR-04,High nepotism risk,EHNR0400297,CHNR0400297,Adi Levi,70.3,0.226,none,0.165319,0.369519,0
+MOD-07,Moderate favoritism,EMOD0700074,CMOD0700074,Noa Levi,87.5,0.423,alumni_network,0.162802,0.369519,0
+HNR-04,High nepotism risk,EHNR0400166,CHNR0400166,Noam Cohen,72.8,0.194,alumni_network,0.162475,0.369519,0
+HNR-07,High nepotism risk,EHNR0700297,CHNR0700297,Noa Cohen,85.9,0.374,legacy_referral,0.162363,0.369519,0
+HNR-01,High nepotism risk,EHNR0100295,CHNR0100295,Neta Biton,84.0,0.328,internal_source,0.161581,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600093,CMOD1600093,Yael Azoulay,91.1,0.588,legacy_referral,0.161112,0.369519,0
+HNR-10,High nepotism risk,EHNR1000059,CHNR1000059,Amit Azoulay,84.1,0.328,internal_source,0.160556,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000249,CMOD1000249,Omer Azoulay,82.1,0.289,legacy_referral,0.159275,0.369519,0
+HNR-07,High nepotism risk,EHNR0700216,CHNR0700216,Ori Peretz,86.5,0.374,legacy_referral,0.155444,0.369519,0
+HNR-03,High nepotism risk,EHNR0300143,CHNR0300143,Daniel Malka,85.0,0.333,internal_source,0.153804,0.369519,0
+HNR-02,High nepotism risk,EHNR0200119,CHNR0200119,Ariel Levi,85.5,0.344,alumni_network,0.153553,0.369519,0
+HNR-07,High nepotism risk,EHNR0700293,CHNR0700293,Gal Cohen,73.7,0.188,alumni_network,0.152233,0.369519,0
+MER-09,Merit-based,EMER0900034,CMER0900034,Adi Biton,82.3,0.277,legacy_referral,0.150965,0.369519,0
+HNR-14,High nepotism risk,EHNR1400281,CHNR1400281,David Vaknin,89.4,0.462,legacy_referral,0.150785,0.369519,0
+MOD-13,Moderate favoritism,EMOD1300269,CMOD1300269,Yuval Haddad,82.6,0.278,legacy_referral,0.148938,0.369519,0
+HNR-08,High nepotism risk,EHNR0800037,CHNR0800037,Lihi Biton,88.7,0.428,alumni_network,0.14889,0.369519,0
+HNR-12,High nepotism risk,EHNR1200288,CHNR1200288,Hila Biton,84.3,0.306,alumni_network,0.147913,0.369519,0
+MER-09,Merit-based,EMER0900231,CMER0900231,Shahar Abutbul,87.2,0.375,legacy_referral,0.147797,0.369519,0
+HNR-08,High nepotism risk,EHNR0800244,CHNR0800244,Noa Mizrahi,84.7,0.312,referral,0.146952,0.369519,0
+HNR-05,High nepotism risk,EHNR0500242,CHNR0500242,Amit Biton,87.2,0.372,legacy_referral,0.146614,0.369519,0
+HNR-02,High nepotism risk,EHNR0200047,CHNR0200047,Noa Biton,90.5,0.501,legacy_referral,0.146543,0.369519,0
+HNR-09,High nepotism risk,EHNR0900076,CHNR0900076,Ariel Mizrahi,87.2,0.368,legacy_referral,0.145038,0.369519,0
+HNR-02,High nepotism risk,EHNR0200191,CHNR0200191,Yael Biton,88.5,0.409,manager_endorsement,0.144837,0.369519,0
+HNR-08,High nepotism risk,EHNR0800161,CHNR0800161,Shira Cohen,92.7,0.637,legacy_referral,0.143166,0.369519,0
+HNR-06,High nepotism risk,EHNR0600038,CHNR0600038,Yair Malka,88.3,0.394,alumni_network,0.141939,0.369519,0
+MER-16,Merit-based,EMER1600042,CMER1600042,Shahar Dahan,88.0,0.378,legacy_referral,0.139671,0.369519,0
+MOD-12,Moderate favoritism,EMOD1200008,CMOD1200008,Tamar Levi,84.2,0.287,legacy_referral,0.139626,0.369519,0
+MER-14,Merit-based,EMER1400104,CMER1400104,Noa Levi,84.3,0.288,legacy_referral,0.139212,0.369519,0
+MER-05,Merit-based,EMER0500194,CMER0500194,Hila Dahan,85.6,0.311,alumni_network,0.13789,0.369519,0
+MOD-03,Moderate favoritism,EMOD0300223,CMOD0300223,Lihi Azoulay,89.6,0.43,alumni_network,0.137707,0.369519,0
+MER-06,Merit-based,EMER0600222,CMER0600222,Noam Azoulay,84.3,0.279,legacy_referral,0.134862,0.369519,0
+MOD-05,Moderate favoritism,EMOD0500238,CMOD0500238,Noa Haddad,84.1,0.274,legacy_referral,0.134123,0.369519,0
+HNR-05,High nepotism risk,EHNR0500132,CHNR0500132,Neta Turgeman,85.0,0.289,legacy_referral,0.133482,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600181,CMOD1600181,Omer Peretz,79.1,0.205,manager_endorsement,0.131918,0.369519,0
+MER-12,Merit-based,EMER1200230,CMER1200230,Daniel Malka,86.2,0.31,referral,0.131711,0.369519,0
+HNR-07,High nepotism risk,EHNR0700320,CHNR0700320,David Mizrahi,87.3,0.336,internal_source,0.131376,0.369519,0
+MOD-01,Moderate favoritism,EMOD0100101,CMOD0100101,Adi Gabay,88.4,0.362,legacy_referral,0.129279,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800131,CMOD0800131,Alon Ben-Ami,91.0,0.463,legacy_referral,0.128309,0.369519,0
+MOD-09,Moderate favoritism,EMOD0900236,CMOD0900236,Yair Biton,85.3,0.281,legacy_referral,0.127188,0.369519,0
+HNR-02,High nepotism risk,EHNR0200196,CHNR0200196,Omer Levi,76.8,0.222,none,0.126851,0.369519,0
+HNR-14,High nepotism risk,EHNR1400302,CHNR1400302,Noa Levi,85.5,0.283,legacy_referral,0.126324,0.369519,0
+MOD-02,Moderate favoritism,EMOD0200243,CMOD0200243,Amit Avraham,76.6,0.219,none,0.126232,0.369519,0
+MER-10,Merit-based,EMER1000136,CMER1000136,Dana Peretz,89.1,0.37,legacy_referral,0.124181,0.369519,0
+HNR-05,High nepotism risk,EHNR0500181,CHNR0500181,Daniel Ohayon,75.9,0.209,none,0.124062,0.369519,0
+HNR-16,High nepotism risk,EHNR1600321,CHNR1600321,Noam Cohen,89.4,0.379,legacy_referral,0.123696,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800258,CMOD0800258,Dana Levi,86.7,0.301,referral,0.12326,0.369519,0
+MER-06,Merit-based,EMER0600075,CMER0600075,Rotem Peretz,89.0,0.362,legacy_referral,0.122582,0.369519,0
+MOD-05,Moderate favoritism,EMOD0500040,CMOD0500040,Hila Levi,85.8,0.278,legacy_referral,0.121556,0.369519,0
+MER-03,Merit-based,EMER0300165,CMER0300165,Yael Katz,81.1,0.208,manager_endorsement,0.12103,0.369519,0
+MOD-06,Moderate favoritism,EMOD0600223,CMOD0600223,Maya Gabay,85.7,0.273,legacy_referral,0.120188,0.369519,0
+MER-01,Merit-based,EMER0100102,CMER0100102,Yael Ohayon,84.3,0.248,manager_endorsement,0.119877,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800100,CMOD0800100,David Cohen,90.3,0.4,manager_endorsement,0.11945,0.369519,0
+MER-11,Merit-based,EMER1100005,CMER1100005,Noa Levi,86.2,0.281,legacy_referral,0.11939,0.369519,0
+MER-14,Merit-based,EMER1400158,CMER1400158,Daniel Dahan,90.8,0.414,manager_endorsement,0.117266,0.369519,0
+MOD-04,Moderate favoritism,EMOD0400232,CMOD0400232,Tamar Azoulay,87.1,0.293,legacy_referral,0.116358,0.369519,0
+MER-16,Merit-based,EMER1600190,CMER1600190,Noa Avraham,91.9,0.462,legacy_referral,0.115211,0.369519,0
+HNR-11,High nepotism risk,EHNR1100278,CHNR1100278,Yuval Cohen,88.7,0.331,internal_source,0.115147,0.369519,0
+MER-10,Merit-based,EMER1000018,CMER1000018,Amit Dahan,86.7,0.281,legacy_referral,0.11507,0.369519,0
+MOD-05,Moderate favoritism,EMOD0500111,CMOD0500111,Daniel Amar,90.1,0.375,legacy_referral,0.114281,0.369519,0
+HNR-02,High nepotism risk,EHNR0200278,CHNR0200278,Maya Abutbul,82.0,0.205,manager_endorsement,0.113596,0.369519,0
+MOD-15,Moderate favoritism,EMOD1500149,CMOD1500149,Omer Abutbul,81.6,0.2,manager_endorsement,0.1133,0.369519,0
+MOD-07,Moderate favoritism,EMOD0700268,CMOD0700268,Tal Levi,90.1,0.367,legacy_referral,0.111843,0.369519,0
+MER-10,Merit-based,EMER1000093,CMER1000093,Shira Cohen,82.4,0.201,alumni_network,0.108917,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600134,CMOD1600134,Roee Ben-David,90.9,0.384,legacy_referral,0.107568,0.369519,0
+MOD-12,Moderate favoritism,EMOD1200126,CMOD1200126,Tamar Mizrahi,83.8,0.214,alumni_network,0.106733,0.369519,0
+MOD-02,Moderate favoritism,EMOD0200240,CMOD0200240,Roni Haddad,91.7,0.415,manager_endorsement,0.106032,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600157,CMOD1600157,David Malka,87.9,0.284,legacy_referral,0.10579,0.369519,0
+HNR-15,High nepotism risk,EHNR1500312,CHNR1500312,David Levi,83.4,0.206,manager_endorsement,0.105292,0.369519,0
+HNR-13,High nepotism risk,EHNR1300274,CHNR1300274,Hila Cohen,88.1,0.286,legacy_referral,0.104783,0.369519,0
+MOD-14,Moderate favoritism,EMOD1400109,CMOD1400109,David Biton,91.0,0.376,legacy_referral,0.104199,0.369519,0
+HNR-13,High nepotism risk,EHNR1300047,CHNR1300047,Adi Cohen,95.0,0.675,legacy_referral,0.10395,0.369519,0
+MOD-11,Moderate favoritism,EMOD1100148,CMOD1100148,David Levi,65.9,0.099,referral,0.103938,0.369519,0
+MER-16,Merit-based,EMER1600065,CMER1600065,Lior Cohen,87.8,0.276,legacy_referral,0.103672,0.369519,0
+HNR-07,High nepotism risk,EHNR0700200,CHNR0700200,Yair Peretz,88.7,0.298,referral,0.103667,0.369519,0
+HNR-05,High nepotism risk,EHNR0500284,CHNR0500284,Omer Malka,81.3,0.221,none,0.101793,0.369519,0
+HNR-12,High nepotism risk,EHNR1200201,CHNR1200201,Omer Haddad,89.1,0.302,alumni_network,0.101359,0.369519,0
+HNR-03,High nepotism risk,EHNR0300044,CHNR0300044,Daniel Mizrahi,88.2,0.278,legacy_referral,0.100984,0.369519,0
+MER-08,Merit-based,EMER0800145,CMER0800145,Amit Sharabi,88.7,0.29,legacy_referral,0.100884,0.369519,0
+HNR-02,High nepotism risk,EHNR0200257,CHNR0200257,Eitan Katz,68.4,0.103,referral,0.100206,0.369519,0
+HNR-14,High nepotism risk,EHNR1400008,CHNR1400008,Gal Malka,90.0,0.325,internal_source,0.100059,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000247,CMOD1000247,Itay Avraham,73.8,0.124,internal_source,0.100022,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600165,CMOD1600165,Noam Avraham,93.2,0.476,legacy_referral,0.099662,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600042,CMOD1600042,Tamar Gabay,72.9,0.118,internal_source,0.098456,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800114,CMOD0800114,Yael Ohayon,85.2,0.216,manager_endorsement,0.098415,0.369519,0
+HNR-08,High nepotism risk,EHNR0800305,CHNR0800305,Ido Friedman,91.5,0.373,legacy_referral,0.097633,0.369519,0
+MER-05,Merit-based,EMER0500191,CMER0500191,Moran Levi,88.9,0.285,legacy_referral,0.097399,0.369519,0
+HNR-13,High nepotism risk,EHNR1300117,CHNR1300117,Tomer Biton,95.3,0.669,legacy_referral,0.096838,0.369519,0
+MER-06,Merit-based,EMER0600197,CMER0600197,Ariel Friedman,85.5,0.216,alumni_network,0.096417,0.369519,0
+MOD-11,Moderate favoritism,EMOD1100175,CMOD1100175,Maya Peretz,83.7,0.231,none,0.092747,0.369519,0
+MER-05,Merit-based,EMER0500060,CMER0500060,Einav Dahan,84.8,0.197,alumni_network,0.092196,0.369519,0
+MER-08,Merit-based,EMER0800070,CMER0800070,Yael Dahan,86.7,0.223,alumni_network,0.091318,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600221,CMOD1600221,Shahar Malka,85.6,0.205,manager_endorsement,0.090892,0.369519,0
+HNR-04,High nepotism risk,EHNR0400252,CHNR0400252,Shira Nasser,90.4,0.305,alumni_network,0.090166,0.369519,0
+MOD-07,Moderate favoritism,EMOD0700032,CMOD0700032,Yonatan Levi,89.7,0.28,legacy_referral,0.088795,0.369519,0
+HNR-01,High nepotism risk,EHNR0100225,CHNR0100225,David Biton,86.2,0.206,alumni_network,0.087524,0.369519,0
+HNR-10,High nepotism risk,EHNR1000201,CHNR1000201,Noa Berkowitz,90.8,0.305,referral,0.086391,0.369519,0
+MOD-02,Moderate favoritism,EMOD0200035,CMOD0200035,Roni Mizrahi,90.2,0.283,legacy_referral,0.085395,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000193,CMOD1000193,Yonatan Malka,86.0,0.197,alumni_network,0.084907,0.369519,0
+MER-02,Merit-based,EMER0200069,CMER0200069,Tamar Malka,80.6,0.142,referral,0.08481,0.369519,0
+HNR-14,High nepotism risk,EHNR1400025,CHNR1400025,Ariel Levi,91.1,0.309,referral,0.084666,0.369519,0
+MOD-05,Moderate favoritism,EMOD0500059,CMOD0500059,Daniel Sharabi,72.7,0.1,referral,0.08405,0.369519,0
+HNR-03,High nepotism risk,EHNR0300067,CHNR0300067,Michal Amar,73.1,0.099,referral,0.081997,0.369519,0
+HNR-11,High nepotism risk,EHNR1100150,CHNR1100150,Nadav Peretz,91.6,0.313,referral,0.08095,0.369519,0
+MER-12,Merit-based,EMER1200152,CMER1200152,Einav Levi,92.8,0.365,legacy_referral,0.080893,0.369519,0
+MER-01,Merit-based,EMER0100125,CMER0100125,Adi Biton,87.1,0.203,manager_endorsement,0.080616,0.369519,0
+HNR-09,High nepotism risk,EHNR0900297,CHNR0900297,Shira Haddad,91.2,0.294,alumni_network,0.079637,0.369519,0
+MER-02,Merit-based,EMER0200099,CMER0200099,Lihi Malka,79.0,0.123,internal_source,0.07952,0.369519,0
+MER-02,Merit-based,EMER0200027,CMER0200027,Yarden Friedman,85.4,0.221,none,0.079472,0.369519,0
+HNR-04,High nepotism risk,EHNR0400151,CHNR0400151,Gal Harari,87.1,0.196,alumni_network,0.077836,0.369519,0
+MOD-02,Moderate favoritism,EMOD0200063,CMOD0200063,Shira Peretz,93.2,0.371,legacy_referral,0.077678,0.369519,0
+MER-06,Merit-based,EMER0600037,CMER0600037,Gal Berkowitz,76.5,0.106,internal_source,0.076691,0.369519,0
+MOD-07,Moderate favoritism,EMOD0700251,CMOD0700251,Lihi Shapiro,92.0,0.311,referral,0.076584,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000291,CMOD1000291,Yair Levi,86.2,0.22,none,0.074778,0.369519,0
+HNR-02,High nepotism risk,EHNR0200045,CHNR0200045,Neta Cohen,75.4,0.097,referral,0.073465,0.369519,0
+MER-16,Merit-based,EMER1600227,CMER1600227,Amit Harari,78.7,0.112,internal_source,0.073444,0.369519,0
+HNR-07,High nepotism risk,EHNR0700104,CHNR0700104,Tal Amar,79.9,0.118,internal_source,0.073027,0.369519,0
+MER-06,Merit-based,EMER0600174,CMER0600174,Amit Sharabi,91.2,0.269,legacy_referral,0.072865,0.369519,0
+HNR-06,High nepotism risk,EHNR0600167,CHNR0600167,David Peretz,76.8,0.102,referral,0.072853,0.369519,0
+MER-08,Merit-based,EMER0800189,CMER0800189,Roee Levi,88.7,0.209,manager_endorsement,0.072706,0.369519,0
+MER-07,Merit-based,EMER0700104,CMER0700104,Roee Halabi,80.6,0.119,internal_source,0.071073,0.369519,0
+MER-16,Merit-based,EMER1600059,CMER1600059,Ariel Azoulay,89.1,0.211,manager_endorsement,0.070817,0.369519,0
+HNR-10,High nepotism risk,EHNR1000057,CHNR1000057,Amit Cohen,84.6,0.149,referral,0.070645,0.369519,0
+MOD-14,Moderate favoritism,EMOD1400133,CMOD1400133,Alon Naim,74.2,0.088,referral,0.069905,0.369519,0
+HNR-10,High nepotism risk,EHNR1000077,CHNR1000077,Neta Levi,80.1,0.113,internal_source,0.069227,0.369519,0
+MER-05,Merit-based,EMER0500225,CMER0500225,Omer Mizrahi,89.4,0.208,manager_endorsement,0.067886,0.369519,0
+MOD-13,Moderate favoritism,EMOD1300113,CMOD1300113,Lihi Levi,77.2,0.096,alumni_network,0.067392,0.369519,0
+MOD-01,Moderate favoritism,EMOD0100049,CMOD0100049,Itay Katz,76.3,0.091,referral,0.066396,0.369519,0
+HNR-07,High nepotism risk,EHNR0700245,CHNR0700245,Daniel Cohen,89.9,0.213,alumni_network,0.066243,0.369519,0
+MOD-02,Moderate favoritism,EMOD0200271,CMOD0200271,Dana Levi,92.9,0.301,alumni_network,0.065806,0.369519,0
+MOD-02,Moderate favoritism,EMOD0200182,CMOD0200182,Dana Cohen,90.0,0.212,alumni_network,0.065269,0.369519,0
+MOD-07,Moderate favoritism,EMOD0700211,CMOD0700211,David Cohen,77.1,0.092,referral,0.06486,0.369519,0
+HNR-06,High nepotism risk,EHNR0600166,CHNR0600166,Dana Cohen,93.7,0.331,internal_source,0.064214,0.369519,0
+MER-06,Merit-based,EMER0600253,CMER0600253,Ori Ohayon,93.3,0.309,alumni_network,0.063731,0.369519,0
+MER-16,Merit-based,EMER1600127,CMER1600127,Lihi Naim,89.8,0.202,manager_endorsement,0.063428,0.369519,0
+MOD-03,Moderate favoritism,EMOD0300174,CMOD0300174,Moran Berkowitz,88.2,0.218,none,0.063351,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600167,CMOD1600167,Noam Dahan,93.3,0.302,alumni_network,0.062287,0.369519,0
+MER-04,Merit-based,EMER0400130,CMER0400130,Yair Vaknin,90.7,0.215,alumni_network,0.061571,0.369519,0
+MOD-11,Moderate favoritism,EMOD1100140,CMOD1100140,Adi Haddad,83.4,0.119,internal_source,0.060824,0.369519,0
+MOD-14,Moderate favoritism,EMOD1400216,CMOD1400216,Daniel Friedman,94.6,0.361,legacy_referral,0.060016,0.369519,0
+MOD-01,Moderate favoritism,EMOD0100131,CMOD0100131,Lior Peretz,84.1,0.122,internal_source,0.059719,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000011,CMOD1000011,Amit Cohen,89.2,0.223,none,0.059318,0.369519,0
+MER-10,Merit-based,EMER1000183,CMER1000183,Adi Abutbul,79.4,0.093,referral,0.058985,0.369519,0
+MER-04,Merit-based,EMER0400148,CMER0400148,Gal Biton,87.9,0.158,internal_source,0.058855,0.369519,0
+MER-12,Merit-based,EMER1200058,CMER1200058,Lior Cohen,90.9,0.21,alumni_network,0.058826,0.369519,0
+HNR-15,High nepotism risk,EHNR1500084,CHNR1500084,Roni Avraham,96.8,0.597,legacy_referral,0.058804,0.369519,0
+HNR-06,High nepotism risk,EHNR0600234,CHNR0600234,Eitan Cohen,89.1,0.215,none,0.057728,0.369519,0
+HNR-09,High nepotism risk,EHNR0900283,CHNR0900283,Ofir Cohen,80.3,0.095,referral,0.057618,0.369519,0
+MER-09,Merit-based,EMER0900061,CMER0900061,Eitan Vaknin,83.5,0.112,internal_source,0.056896,0.369519,0
+MER-02,Merit-based,EMER0200220,CMER0200220,Michal Sharabi,89.5,0.22,none,0.056892,0.369519,0
+MOD-02,Moderate favoritism,EMOD0200250,CMOD0200250,Yuval Sharabi,83.2,0.109,internal_source,0.05638,0.369519,0
+MER-10,Merit-based,EMER1000031,CMER1000031,Noa Mizrahi,80.8,0.095,referral,0.056157,0.369519,0
+MER-08,Merit-based,EMER0800221,CMER0800221,Yonatan Berkowitz,82.7,0.103,internal_source,0.05486,0.369519,0
+MOD-01,Moderate favoritism,EMOD0100213,CMOD0100213,Ori Mizrahi,93.8,0.281,legacy_referral,0.053636,0.369519,0
+MOD-15,Moderate favoritism,EMOD1500169,CMOD1500169,Noa Levi,96.2,0.453,legacy_referral,0.053001,0.369519,0
+MER-12,Merit-based,EMER1200015,CMER1200015,Tomer Cohen,85.8,0.12,alumni_network,0.05247,0.369519,0
+MOD-05,Moderate favoritism,EMOD0500182,CMOD0500182,Yael Azoulay,85.7,0.118,internal_source,0.05195,0.369519,0
+HNR-11,High nepotism risk,EHNR1100273,CHNR1100273,Noa Abutbul,85.7,0.117,internal_source,0.051509,0.369519,0
+MOD-05,Moderate favoritism,EMOD0500273,CMOD0500273,Amit Sadeh,92.4,0.22,alumni_network,0.05148,0.369519,0
+MOD-11,Moderate favoritism,EMOD1100015,CMOD1100015,Neta Cohen,94.9,0.324,internal_source,0.050868,0.369519,0
+MOD-03,Moderate favoritism,EMOD0300271,CMOD0300271,Michal Sharabi,90.8,0.221,none,0.050079,0.369519,0
+MOD-06,Moderate favoritism,EMOD0600165,CMOD0600165,Ido Sasson,83.6,0.099,referral,0.049983,0.369519,0
+MER-14,Merit-based,EMER1400209,CMER1400209,Shahar Nasser,90.2,0.164,internal_source,0.049487,0.369519,0
+MOD-15,Moderate favoritism,EMOD1500206,CMOD1500206,Amit Nasser,83.2,0.095,alumni_network,0.049139,0.369519,0
+MOD-01,Moderate favoritism,EMOD0100054,CMOD0100054,Omer Ben-David,92.3,0.204,manager_endorsement,0.048374,0.369519,0
+MER-05,Merit-based,EMER0500046,CMER0500046,Maya Levi,83.7,0.096,referral,0.04818,0.369519,0
+MER-16,Merit-based,EMER1600158,CMER1600158,Yuval Biton,92.6,0.211,manager_endorsement,0.048082,0.369519,0
+MER-16,Merit-based,EMER1600054,CMER1600054,Noam Cohen,86.9,0.118,internal_source,0.047598,0.369519,0
+MER-16,Merit-based,EMER1600026,CMER1600026,Yonatan Gabay,72.2,0.054,referral,0.046217,0.369519,0
+HNR-07,High nepotism risk,EHNR0700239,CHNR0700239,Assaf Ohayon,96.9,0.472,legacy_referral,0.045076,0.369519,0
+MOD-04,Moderate favoritism,EMOD0400263,CMOD0400263,Gal Abutbul,86.0,0.104,referral,0.044824,0.369519,0
+MOD-04,Moderate favoritism,EMOD0400095,CMOD0400095,Ariel Katz,84.6,0.093,referral,0.044094,0.369519,0
+MOD-05,Moderate favoritism,EMOD0500277,CMOD0500277,Tal Levi,95.1,0.29,legacy_referral,0.043754,0.369519,0
+MER-05,Merit-based,EMER0500010,CMER0500010,Yael Malka,85.2,0.096,referral,0.04374,0.369519,0
+MOD-05,Moderate favoritism,EMOD0500156,CMOD0500156,Omer Azoulay,92.9,0.198,manager_endorsement,0.043288,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800172,CMOD0800172,Shira Hassan,88.1,0.117,internal_source,0.042866,0.369519,0
+HNR-02,High nepotism risk,EHNR0200279,CHNR0200279,Assaf Dahan,95.4,0.3,alumni_network,0.042488,0.369519,0
+MER-12,Merit-based,EMER1200194,CMER1200194,Rotem Friedman,89.7,0.132,internal_source,0.04186,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600016,CMOD1600016,Tamar Sharabi,86.7,0.101,referral,0.04136,0.369519,0
+MOD-06,Moderate favoritism,EMOD0600275,CMOD0600275,Ori Malka,88.6,0.117,internal_source,0.041067,0.369519,0
+MER-01,Merit-based,EMER0100151,CMER0100151,Maya Katz,87.8,0.106,internal_source,0.039816,0.369519,0
+MER-14,Merit-based,EMER1400182,CMER1400182,Roee Bitan,88.4,0.111,referral,0.039641,0.369519,0
+HNR-05,High nepotism risk,EHNR0500057,CHNR0500057,Noa Toledano,89.6,0.121,internal_source,0.03875,0.369519,0
+MOD-06,Moderate favoritism,EMOD0600187,CMOD0600187,Shira Harari,87.0,0.096,referral,0.038424,0.369519,0
+MER-14,Merit-based,EMER1400085,CMER1400085,Dana Dahan,88.0,0.103,internal_source,0.038058,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800028,CMOD0800028,Yair Katz,94.2,0.213,alumni_network,0.038047,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000234,CMOD1000234,Omer Mizrahi,87.4,0.094,referral,0.03646,0.369519,0
+HNR-11,High nepotism risk,EHNR1100137,CHNR1100137,Einav Friedman,73.7,0.044,referral,0.035629,0.369519,0
+MER-06,Merit-based,EMER0600150,CMER0600150,Amit Azoulay,90.5,0.121,internal_source,0.035392,0.369519,0
+MER-07,Merit-based,EMER0700073,CMER0700073,Rotem Sasson,90.8,0.121,internal_source,0.034273,0.369519,0
+MER-06,Merit-based,EMER0600266,CMER0600266,Adi Ohayon,89.8,0.109,internal_source,0.034226,0.369519,0
+MER-07,Merit-based,EMER0700083,CMER0700083,David Levi,88.1,0.092,referral,0.033706,0.369519,0
+HNR-06,High nepotism risk,EHNR0600216,CHNR0600216,Yarden Avraham,97.4,0.421,legacy_referral,0.03368,0.369519,0
+HNR-02,High nepotism risk,EHNR0200216,CHNR0200216,Yael Dayan,88.9,0.096,referral,0.032808,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000302,CMOD1000302,Lior Cohen,90.0,0.106,referral,0.032635,0.369519,0
+HNR-11,High nepotism risk,EHNR1100022,CHNR1100022,Yair Dayan,95.0,0.21,manager_endorsement,0.03234,0.369519,0
+MER-05,Merit-based,EMER0500102,CMER0500102,Roee Vaknin,90.6,0.111,alumni_network,0.032121,0.369519,0
+MER-08,Merit-based,EMER0800217,CMER0800217,Lihi Dayan,91.5,0.122,internal_source,0.031934,0.369519,0
+MER-02,Merit-based,EMER0200159,CMER0200159,Hila Levi,78.5,0.048,referral,0.031776,0.369519,0
+MER-03,Merit-based,EMER0300007,CMER0300007,Yair Katz,89.9,0.102,alumni_network,0.031722,0.369519,0
+MER-09,Merit-based,EMER0900199,CMER0900199,Eitan Sharabi,90.1,0.103,alumni_network,0.031389,0.369519,0
+MOD-12,Moderate favoritism,EMOD1200048,CMOD1200048,Ido Peretz,78.0,0.046,referral,0.031159,0.369519,0
+MOD-09,Moderate favoritism,EMOD0900281,CMOD0900281,Maya Cohen,94.0,0.209,none,0.03089,0.369519,0
+MER-08,Merit-based,EMER0800209,CMER0800209,Noa Mizrahi,92.3,0.127,internal_source,0.030115,0.369519,0
+MER-06,Merit-based,EMER0600252,CMER0600252,Hila Dahan,92.8,0.122,internal_source,0.027038,0.369519,0
+MER-02,Merit-based,EMER0200169,CMER0200169,Maya Peretz,90.4,0.091,referral,0.026902,0.369519,0
+HNR-16,High nepotism risk,EHNR1600132,CHNR1600132,David Halabi,91.4,0.099,referral,0.02621,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800089,CMOD0800089,Michal Biton,91.5,0.1,referral,0.026175,0.369519,0
+MOD-11,Moderate favoritism,EMOD1100301,CMOD1100301,Moran Abutbul,93.1,0.121,internal_source,0.025713,0.369519,0
+MER-08,Merit-based,EMER0800205,CMER0800205,Roni Katz,92.7,0.111,internal_source,0.024947,0.369519,0
+HNR-09,High nepotism risk,EHNR0900097,CHNR0900097,Roee Peretz,94.2,0.137,referral,0.024472,0.369519,0
+MER-12,Merit-based,EMER1200109,CMER1200109,Lior Gabay,92.5,0.1,alumni_network,0.023088,0.369519,0
+MOD-07,Moderate favoritism,EMOD0700260,CMOD0700260,Alon Haddad,92.6,0.095,referral,0.021648,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000265,CMOD1000265,Ori Friedman,93.4,0.102,referral,0.020731,0.369519,0
+MER-04,Merit-based,EMER0400062,CMER0400062,Yarden Dahan,96.2,0.22,none,0.020592,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800081,CMOD0800081,Itay Sasson,92.5,0.085,referral,0.019624,0.369519,0
+MOD-09,Moderate favoritism,EMOD0900283,CMOD0900283,Noa Dahan,91.8,0.065,referral,0.016412,0.369519,0
+MER-10,Merit-based,EMER1000134,CMER1000134,Adi Mizrahi,87.1,0.04,referral,0.015885,0.369519,0
+MOD-12,Moderate favoritism,EMOD1200236,CMOD1200236,Adi Berkowitz,70.5,0.021,none,0.015259,0.369519,0
+MER-14,Merit-based,EMER1400024,CMER1400024,Moran Friedman,90.3,0.049,referral,0.014633,0.369519,0
+HNR-12,High nepotism risk,EHNR1200091,CHNR1200091,Tal Katz,77.3,0.026,none,0.014537,0.369519,0
+MER-13,Merit-based,EMER1300277,CMER1300277,Tamar Katz,95.5,0.101,referral,0.013989,0.369519,0
+MER-14,Merit-based,EMER1400113,CMER1400113,Shira Gabay,96.3,0.12,internal_source,0.013665,0.369519,0
+MOD-13,Moderate favoritism,EMOD1300264,CMOD1300264,Neta Levi,95.2,0.09,referral,0.013298,0.369519,0
+MOD-07,Moderate favoritism,EMOD0700187,CMOD0700187,Dana Toledano,95.5,0.096,referral,0.013296,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800090,CMOD0800090,Eitan Ben-David,71.2,0.018,none,0.012769,0.369519,0
+MER-05,Merit-based,EMER0500123,CMER0500123,Yonatan Mizrahi,77.8,0.023,none,0.012576,0.369519,0
+HNR-05,High nepotism risk,EHNR0500270,CHNR0500270,Tamar Ben-David,96.0,0.1,referral,0.012312,0.369519,0
+MOD-01,Moderate favoritism,EMOD0100113,CMOD0100113,Roni Gabay,98.3,0.202,manager_endorsement,0.01058,0.369519,0
+MER-11,Merit-based,EMER1100200,CMER1100200,Lior Levi,68.7,0.013,none,0.010022,0.369519,0
+HNR-15,High nepotism risk,EHNR1500106,CHNR1500106,Shahar Sasson,65.7,0.011,none,0.009293,0.369519,0
+MER-15,Merit-based,EMER1500096,CMER1500096,Shahar Levi,82.9,0.022,none,0.009266,0.369519,0
+MER-16,Merit-based,EMER1600122,CMER1600122,Tamar Friedman,87.3,0.028,none,0.008758,0.369519,0
+MER-12,Merit-based,EMER1200030,CMER1200030,Noam Levi,75.4,0.014,none,0.008483,0.369519,0
+MOD-07,Moderate favoritism,EMOD0700052,CMOD0700052,Neta Peretz,99.1,0.303,alumni_network,0.008408,0.369519,0
+MOD-05,Moderate favoritism,EMOD0500270,CMOD0500270,Tamar Cohen,65.8,0.009,none,0.007582,0.369519,0
+MOD-14,Moderate favoritism,EMOD1400211,CMOD1400211,Neta Mizrahi,70.0,0.01,none,0.007389,0.369519,0
+MER-05,Merit-based,EMER0500023,CMER0500023,Amit Peretz,86.6,0.022,none,0.00726,0.369519,0
+MER-03,Merit-based,EMER0300075,CMER0300075,Omer Peretz,79.1,0.014,none,0.007207,0.369519,0
+MER-08,Merit-based,EMER0800208,CMER0800208,Yael Avraham,85.0,0.018,none,0.006651,0.369519,0
+MOD-06,Moderate favoritism,EMOD0600024,CMOD0600024,Maya Azoulay,82.1,0.015,none,0.006614,0.369519,0
+MER-08,Merit-based,EMER0800143,CMER0800143,Shira Mor,85.9,0.019,none,0.006599,0.369519,0
+MER-08,Merit-based,EMER0800228,CMER0800228,Tamar Moyal,70.6,0.009,none,0.006517,0.369519,0
+MER-09,Merit-based,EMER0900121,CMER0900121,Yonatan Biton,82.8,0.015,none,0.006354,0.369519,0
+MER-08,Merit-based,EMER0800013,CMER0800013,Yarden Cohen,88.6,0.021,none,0.005897,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800251,CMOD0800251,Shahar Friedman,81.7,0.013,none,0.005859,0.369519,0
+HNR-01,High nepotism risk,EHNR0100205,CHNR0100205,Tal Abutbul,86.3,0.017,none,0.005736,0.369519,0
+MER-09,Merit-based,EMER0900219,CMER0900219,Noam Berkowitz,83.5,0.014,none,0.00569,0.369519,0
+MER-12,Merit-based,EMER1200212,CMER1200212,Eitan Levi,74.6,0.009,none,0.00563,0.369519,0
+MER-11,Merit-based,EMER1100065,CMER1100065,Tomer Abutbul,87.5,0.018,none,0.005542,0.369519,0
+MER-01,Merit-based,EMER0100115,CMER0100115,Amit Dahan,82.9,0.013,none,0.005476,0.369519,0
+MER-13,Merit-based,EMER1300184,CMER1300184,Dana Turgeman,76.0,0.009,none,0.00532,0.369519,0
+MOD-05,Moderate favoritism,EMOD0500013,CMOD0500013,Amit Katz,88.1,0.017,none,0.004983,0.369519,0
+MER-15,Merit-based,EMER1500091,CMER1500091,Amit Peretz,88.4,0.017,none,0.004857,0.369519,0
+MER-14,Merit-based,EMER1400037,CMER1400037,Shira Abutbul,75.4,0.008,none,0.004847,0.369519,0
+HNR-07,High nepotism risk,EHNR0700012,CHNR0700012,Ori Friedman,85.1,0.013,none,0.004771,0.369519,0
+MOD-01,Moderate favoritism,EMOD0100220,CMOD0100220,Ori Levi,73.4,0.007,none,0.004586,0.369519,0
+MER-06,Merit-based,EMER0600134,CMER0600134,Daniel Ben-Ami,98.6,0.105,alumni_network,0.004528,0.369519,0
+MER-12,Merit-based,EMER1200252,CMER1200252,Maya Nasser,89.4,0.017,none,0.004439,0.369519,0
+MER-04,Merit-based,EMER0400178,CMER0400178,Yuval Nasser,88.1,0.015,none,0.004396,0.369519,0
+HNR-09,High nepotism risk,EHNR0900301,CHNR0900301,Yarden Peretz,90.2,0.018,none,0.004345,0.369519,0
+HNR-02,High nepotism risk,EHNR0200337,CHNR0200337,Daniel Buzaglo,90.2,0.018,none,0.004345,0.369519,0
+MER-16,Merit-based,EMER1600075,CMER1600075,Gal Levi,97.4,0.054,referral,0.00432,0.369519,0
+HNR-10,High nepotism risk,EHNR1000325,CHNR1000325,Dana Harari,90.8,0.019,none,0.004305,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800052,CMOD0800052,Noa Amar,78.7,0.008,none,0.004197,0.369519,0
+MER-03,Merit-based,EMER0300072,CMER0300072,Noa Dayan,78.7,0.008,none,0.004197,0.369519,0
+MER-16,Merit-based,EMER1600202,CMER1600202,Tamar Malka,84.6,0.011,none,0.004172,0.369519,0
+MER-05,Merit-based,EMER0500027,CMER0500027,Adi Malka,87.1,0.013,none,0.00413,0.369519,0
+MOD-03,Moderate favoritism,EMOD0300119,CMOD0300119,Tomer Haddad,93.4,0.025,none,0.004065,0.369519,0
+HNR-16,High nepotism risk,EHNR1600144,CHNR1600144,Noa Haddad,72.6,0.006,none,0.004049,0.369519,0
+HNR-06,High nepotism risk,EHNR0600061,CHNR0600061,Amit Friedman,87.6,0.013,none,0.00397,0.369519,0
+MOD-05,Moderate favoritism,EMOD0500190,CMOD0500190,Michal Cohen,90.2,0.016,none,0.003862,0.369519,0
+MER-15,Merit-based,EMER1500020,CMER1500020,Nadav Cohen,85.8,0.011,none,0.003848,0.369519,0
+MER-11,Merit-based,EMER1100021,CMER1100021,Yonatan Levi,92.2,0.02,none,0.003842,0.369519,0
+MER-05,Merit-based,EMER0500030,CMER0500030,Gal Abutbul,78.6,0.007,none,0.00369,0.369519,0
+MOD-07,Moderate favoritism,EMOD0700242,CMOD0700242,Assaf Sharabi,99.4,0.198,manager_endorsement,0.003663,0.369519,0
+MER-06,Merit-based,EMER0600107,CMER0600107,Amit Peretz,93.3,0.022,none,0.00363,0.369519,0
+MER-13,Merit-based,EMER1300252,CMER1300252,Roni Levi,83.8,0.009,none,0.003591,0.369519,0
+MOD-12,Moderate favoritism,EMOD1200043,CMOD1200043,Yael Levi,87.5,0.011,none,0.003387,0.369519,0
+MER-08,Merit-based,EMER0800235,CMER0800235,Gal Friedman,90.3,0.014,none,0.003345,0.369519,0
+MER-08,Merit-based,EMER0800178,CMER0800178,Ariel Moyal,85.1,0.009,none,0.003303,0.369519,0
+MER-01,Merit-based,EMER0100079,CMER0100079,Adi Levi,81.1,0.007,none,0.003258,0.369519,0
+MER-04,Merit-based,EMER0400125,CMER0400125,Nadav Vaknin,90.6,0.014,none,0.003241,0.369519,0
+MER-11,Merit-based,EMER1100058,CMER1100058,Assaf Friedman,84.0,0.008,none,0.003153,0.369519,0
+MER-04,Merit-based,EMER0400113,CMER0400113,Ariel Ben-Ami,85.8,0.009,none,0.003148,0.369519,0
+MOD-16,Moderate favoritism,EMOD1600289,CMOD1600289,Amit Azoulay,87.4,0.01,none,0.003103,0.369519,0
+MOD-08,Moderate favoritism,EMOD0800273,CMOD0800273,Ori Levi,79.1,0.006,none,0.003089,0.369519,0
+MER-11,Merit-based,EMER1100240,CMER1100240,Omer Sharabi,86.3,0.009,none,0.003037,0.369519,0
+MER-09,Merit-based,EMER0900145,CMER0900145,Daniel Ben-David,82.8,0.007,none,0.002965,0.369519,0
+HNR-02,High nepotism risk,EHNR0200025,CHNR0200025,David Gabay,92.1,0.015,none,0.002919,0.369519,0
+MER-03,Merit-based,EMER0300171,CMER0300171,Michal Biton,88.5,0.01,none,0.002833,0.369519,0
+MER-09,Merit-based,EMER0900135,CMER0900135,Maya Cohen,91.2,0.013,none,0.002817,0.369519,0
+MER-12,Merit-based,EMER1200224,CMER1200224,Assaf Azoulay,85.9,0.008,none,0.002778,0.369519,0
+MER-15,Merit-based,EMER1500035,CMER1500035,Amit Ben-Ami,86.0,0.008,none,0.002758,0.369519,0
+MER-07,Merit-based,EMER0700146,CMER0700146,Tamar Friedman,92.2,0.014,none,0.002689,0.369519,0
+MER-02,Merit-based,EMER0200078,CMER0200078,Adi Shapiro,89.5,0.01,none,0.002586,0.369519,0
+MER-11,Merit-based,EMER1100032,CMER1100032,Shira Mizrahi,91.4,0.012,none,0.002542,0.369519,0
+MER-03,Merit-based,EMER0300226,CMER0300226,Maya Katz,92.9,0.013,none,0.002274,0.369519,0
+MER-16,Merit-based,EMER1600222,CMER1600222,Dana Abutbul,89.8,0.009,none,0.002261,0.369519,0
+MOD-01,Moderate favoritism,EMOD0100162,CMOD0100162,Yonatan Mizrahi,90.0,0.009,none,0.002217,0.369519,0
+MER-12,Merit-based,EMER1200087,CMER1200087,Ofir Toledano,87.3,0.007,none,0.00219,0.369519,0
+MER-03,Merit-based,EMER0300240,CMER0300240,Noa Ben-David,88.9,0.008,none,0.002187,0.369519,0
+MER-05,Merit-based,EMER0500088,CMER0500088,Yair Azoulay,87.4,0.007,none,0.002172,0.369519,0
+MER-04,Merit-based,EMER0400220,CMER0400220,David Ohayon,92.7,0.012,none,0.002158,0.369519,0
+MER-12,Merit-based,EMER1200243,CMER1200243,Ido Dahan,92.2,0.011,none,0.002113,0.369519,0
+MOD-11,Moderate favoritism,EMOD1100034,CMOD1100034,Yarden Mor,79.1,0.004,none,0.002059,0.369519,0
+MER-13,Merit-based,EMER1300107,CMER1300107,Dana Sadeh,88.3,0.007,none,0.002017,0.369519,0
+MER-13,Merit-based,EMER1300208,CMER1300208,Shahar Gabay,88.6,0.007,none,0.001966,0.369519,0
+MOD-14,Moderate favoritism,EMOD1400206,CMOD1400206,Ariel Naim,91.3,0.009,none,0.001929,0.369519,0
+MOD-09,Moderate favoritism,EMOD0900277,CMOD0900277,Shira Friedman,74.0,0.003,none,0.001921,0.369519,0
+MER-01,Merit-based,EMER0100135,CMER0100135,Amit Biton,89.2,0.007,none,0.001862,0.369519,0
+MOD-13,Moderate favoritism,EMOD1300175,CMOD1300175,Tomer Ben-Ami,89.6,0.007,none,0.001793,0.369519,0
+MER-02,Merit-based,EMER0200251,CMER0200251,Ariel Azoulay,92.8,0.01,none,0.001773,0.369519,0
+MER-01,Merit-based,EMER0100213,CMER0100213,Hila Shapiro,95.5,0.016,none,0.001773,0.369519,0
+HNR-05,High nepotism risk,EHNR0500178,CHNR0500178,Tamar Berkowitz,95.0,0.013,none,0.001602,0.369519,0
+MER-14,Merit-based,EMER1400234,CMER1400234,Ariel Ohayon,95.5,0.013,none,0.00144,0.369519,0
+HNR-10,High nepotism risk,EHNR1000225,CHNR1000225,Itay Levi,96.6,0.017,none,0.001423,0.369519,0
+MER-01,Merit-based,EMER0100225,CMER0100225,Dana Avraham,90.7,0.006,none,0.001375,0.369519,0
+HNR-14,High nepotism risk,EHNR1400117,CHNR1400117,Ido Levi,95.8,0.013,none,0.001344,0.369519,0
+MOD-06,Moderate favoritism,EMOD0600254,CMOD0600254,Lior Friedman,93.2,0.008,none,0.00134,0.369519,0
+MOD-07,Moderate favoritism,EMOD0700118,CMOD0700118,Eitan Halabi,72.9,0.002,none,0.001335,0.369519,0
+MER-06,Merit-based,EMER0600125,CMER0600125,Ido Katz,92.6,0.007,none,0.001276,0.369519,0
+MER-15,Merit-based,EMER1500065,CMER1500065,Alon Dahan,97.3,0.018,none,0.001197,0.369519,0
+MER-12,Merit-based,EMER1200043,CMER1200043,Roni Vaknin,88.2,0.004,none,0.001162,0.369519,0
+MOD-13,Moderate favoritism,EMOD1300211,CMOD1300211,Shira Ben-David,88.2,0.004,none,0.001162,0.369519,0
+MER-03,Merit-based,EMER0300089,CMER0300089,Ariel Harari,92.3,0.006,none,0.001138,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000008,CMOD1000008,Michal Friedman,92.3,0.006,none,0.001138,0.369519,0
+MER-02,Merit-based,EMER0200092,CMER0200092,Nadav Buzaglo,94.9,0.009,none,0.00113,0.369519,0
+MER-14,Merit-based,EMER1400169,CMER1400169,Yael Levi,93.7,0.007,none,0.001086,0.369519,0
+MER-12,Merit-based,EMER1200095,CMER1200095,Itay Peretz,92.7,0.005,none,0.000899,0.369519,0
+MER-15,Merit-based,EMER1500050,CMER1500050,Yael Levi,91.0,0.004,none,0.000887,0.369519,0
+MER-16,Merit-based,EMER1600171,CMER1600171,Dana Peretz,93.1,0.005,none,0.00085,0.369519,0
+MOD-01,Moderate favoritism,EMOD0100085,CMOD0100085,Rotem Friedman,97.7,0.015,none,0.00085,0.369519,0
+HNR-03,High nepotism risk,EHNR0300030,CHNR0300030,Yarden Cohen,93.1,0.005,none,0.00085,0.369519,0
+MOD-03,Moderate favoritism,EMOD0300282,CMOD0300282,Noa Malka,93.1,0.005,none,0.00085,0.369519,0
+MER-13,Merit-based,EMER1300039,CMER1300039,Yair Haddad,96.5,0.009,none,0.000776,0.369519,0
+MER-15,Merit-based,EMER1500024,CMER1500024,Amit Swisa,93.7,0.005,none,0.000776,0.369519,0
+MER-02,Merit-based,EMER0200260,CMER0200260,Lihi Sharabi,93.8,0.005,none,0.000764,0.369519,0
+MOD-09,Moderate favoritism,EMOD0900254,CMOD0900254,David Moyal,97.8,0.014,none,0.000759,0.369519,0
+MER-02,Merit-based,EMER0200176,CMER0200176,Yael Levi,90.1,0.003,none,0.000731,0.369519,0
+MER-04,Merit-based,EMER0400158,CMER0400158,David Turgeman,91.3,0.003,none,0.000643,0.369519,0
+MOD-10,Moderate favoritism,EMOD1000097,CMOD1000097,Rotem Katz,97.3,0.008,none,0.000532,0.369519,0
+MOD-03,Moderate favoritism,EMOD0300248,CMOD0300248,Moran Sharabi,89.6,0.002,none,0.000512,0.369519,0
+MER-04,Merit-based,EMER0400069,CMER0400069,Neta Dahan,95.0,0.004,none,0.000493,0.369519,0
+MER-03,Merit-based,EMER0300231,CMER0300231,Noam Mizrahi,94.3,0.003,none,0.000421,0.369519,0
+MOD-09,Moderate favoritism,EMOD0900129,CMOD0900129,Shira Biton,94.6,0.003,none,0.000399,0.369519,0
+MER-10,Merit-based,EMER1000132,CMER1000132,Tamar Sharabi,98.3,0.009,none,0.000377,0.369519,0
+MER-13,Merit-based,EMER1300035,CMER1300035,Dana Avraham,97.4,0.004,none,0.000256,0.369519,0
+MER-14,Merit-based,EMER1400115,CMER1400115,Neta Friedman,90.3,0.001,none,0.000239,0.369519,0
+MER-08,Merit-based,EMER0800222,CMER0800222,David Buzaglo,94.8,0.001,none,0.000128,0.369519,0
+MOD-15,Moderate favoritism,EMOD1500095,CMOD1500095,Gal Cohen,99.8,0.01,none,4.9e-05,0.369519,0
+MOD-13,Moderate favoritism,EMOD1300196,CMOD1300196,Nadav Ohayon,96.3,0.0,none,0.0,0.369519,0
+MOD-13,Moderate favoritism,EMOD1300295,CMOD1300295,Dana Mizrahi,100.0,0.014,none,0.0,0.369519,0
+HNR-04,High nepotism risk,EHNR0400054,CHNR0400054,Ido Mizrahi,88.0,0.0,none,0.0,0.369519,0
+MOD-09,Moderate favoritism,EMOD0900163,CMOD0900163,Adi Friedman,89.5,0.0,none,0.0,0.369519,0
+HNR-07,High nepotism risk,EHNR0700077,CHNR0700077,Daniel Ben-Ami,96.9,0.0,none,0.0,0.369519,0
+MER-14,Merit-based,EMER1400208,CMER1400208,Yarden Malka,90.1,0.0,none,0.0,0.369519,0
+HNR-09,High nepotism risk,EHNR0900121,CHNR0900121,Omer Friedman,88.1,0.0,none,0.0,0.369519,0
+MER-16,Merit-based,EMER1600205,CMER1600205,Roee Peretz,93.1,0.0,none,0.0,0.369519,0
+MER-08,Merit-based,EMER0800152,CMER0800152,Lior Dayan,91.9,0.0,none,0.0,0.369519,0
+HNR-13,High nepotism risk,EHNR1300055,CHNR1300055,Yonatan Levi,100.0,0.328,legacy_referral,0.0,0.369519,0

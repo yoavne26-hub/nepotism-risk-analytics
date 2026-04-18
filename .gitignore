@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local IDE / OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs and runtime leftovers
+*.log
+artifacts/uvicorn.stdout.log
+artifacts/uvicorn.stderr.log
+
+# Local scratch / invalid files
+nul
+app.py
