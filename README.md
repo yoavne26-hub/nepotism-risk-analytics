@@ -1,123 +1,267 @@
 # Nepotism Risk Analytics
+Simulation-Driven HR Fairness Modeling with Predictive Analytics, Structural Risk Scoring, and Decision Diagnostics
 
-Nepotism Risk Analytics is a synthetic HR analytics platform for modeling how favoritism and connection-based decision-making affect hiring quality, promotion fairness, structural risk, suspicious decisions, and long-run organizational outcomes.
+---
 
-The repository combines a Python analytics pipeline with a local web application built on FastAPI and a static frontend. It is designed for portfolio presentation, academic demonstration, and analytical prototyping around workforce fairness, risk detection, and scenario comparison.
+## Motivation
 
-## Product Highlights
+I built this project to combine several analytical ideas that are often taught separately into one coherent system.
 
-- Multi-model analytics pipeline covering hiring, promotion, structural nepotism risk, and suspicious decision detection
-- Synthetic workforce datasets generated across three HR regimes:
-  - Merit-based
-  - Moderate favoritism
-  - High nepotism risk
-- Local web application for:
-  - Hiring probability prediction
-  - Promotion probability prediction
-  - Data summary and scenario comparisons
-  - Risk dashboard for manager and department exposure
-  - Statistical analysis and sensitivity exploration
-  - Organizational impact comparison across scenarios
-- Persisted predictor bundles for fast app startup without retraining during normal use
-- Exported metrics, ranked outputs, and plots for downstream reporting
+In industrial engineering, operations research, statistics, and analytics courses, it is common to study simulation, predictive modeling, inference, diagnostics, and decision analysis as disconnected techniques. What interested me was not using each method in isolation, but designing a framework where they reinforce one another.
 
-## Why This Project Matters
+This project started from a practical question:
 
-Most analytics work around favoritism stops at descriptive reporting. This project goes further by creating an end-to-end analytical environment that can:
+How can we model the organizational impact of favoritism and nepotism in a way that is measurable, interpretable, and operationally meaningful?
 
-- simulate alternative HR regimes
-- quantify how connected candidates and employees alter outcomes
-- estimate structural nepotism concentration at manager and department level
-- surface suspicious low-merit or low-performance decisions
-- compare the organizational cost of favoritism through fairness, efficiency, and risk outputs
+Instead of treating favoritism as only a qualitative organizational issue, I wanted to express it through data-generating scenarios, model-driven decisions, structural risk metrics, suspicious-case detection, and comparative outcome analysis. That led to a platform where synthetic HR regimes can be generated, scored, compared, and inspected through a product-style interface.
 
-The result is a product-style analytical system rather than a single notebook or isolated model.
+For me, this project represents a shift from solving isolated analytical tasks to building a complete decision-support environment.
 
-## Product Gallery
+---
 
-Add screenshots to `docs/screenshots/` using the file names below. The README is already structured so the gallery can be completed without changing the rest of the document.
+## Overview
 
-| View | Suggested File | Purpose |
-| --- | --- | --- |
-| Dashboard | `docs/screenshots/dashboard-overview.png` | High-level KPI cards and product landing page |
-| Hiring Predictor | `docs/screenshots/hiring-predictor.png` | Candidate scoring workflow |
-| Promotion Predictor | `docs/screenshots/promotion-predictor.png` | Employee promotion scoring workflow |
-| Data Summary | `docs/screenshots/data-summary.png` | Scenario metrics and dataset overview |
-| Risk Dashboard | `docs/screenshots/risk-dashboard.png` | Network and anomaly outputs |
-| Statistical Analysis | `docs/screenshots/statistical-analysis.png` | Sensitivity charts and matched-pair analysis |
-| Organizational Impact | `docs/screenshots/organizational-impact.png` | Cross-scenario fairness and efficiency comparisons |
+Nepotism Risk Analytics is a synthetic HR analytics platform that models how relationship-driven decision-making affects:
 
-## Core Capabilities
+- hiring quality
+- promotion fairness
+- structural concentration of connected employees
+- suspicious low-merit or low-performance decisions
+- scenario-level organizational outcomes
+
+The repository combines:
+
+- a Python analytics pipeline
+- a FastAPI backend
+- a static frontend web application
+- exported model outputs and diagnostics
+
+The system currently evaluates three HR regimes:
+
+- Merit-based
+- Moderate favoritism
+- High nepotism risk
+
+---
+
+## System Architecture
+
+Data Generation -> Data Preparation -> Hiring Model -> Promotion Model -> Network Risk Model -> Suspicious Decision Scoring -> FastAPI Backend -> Web Dashboard
+
+### Core Components
+
+| Module | Responsibility |
+| --- | --- |
+| `src/generate_data.py` | Generates synthetic candidate and employee data across multiple HR regimes |
+| `src/prepare_model_data.py` | Validates, transforms, and engineers model-ready datasets |
+| `src/model_hiring.py` | Trains and evaluates candidate-level hiring models |
+| `src/model_promotion.py` | Trains and evaluates employee-level promotion models |
+| `src/model_network_nepotism.py` | Produces manager-level and department-level structural risk scores |
+| `src/model_anomaly.py` | Flags suspicious hires and promotions based on merit/performance mismatch and connection signals |
+| `backend/api.py` | Serves the local analytics web application through FastAPI |
+| `frontend/` | Static product interface for prediction, comparison, and inspection |
+| `app_utils/` | Shared helper layer for prediction, aggregation, dashboard data, and explanatory analytics |
+
+---
+
+## Interface and Visualization
+
+The application currently includes several product-facing views. Add screenshots to `docs/screenshots/` using the suggested names below.
+
+### Home Screen
+
+Screenshot placeholder: `docs/screenshots/dashboard-overview.png`
+
+Purpose:
+
+- product entry point
+- KPI overview
+- analytical model orientation
+
+---
+
+### Hiring Predictor
+
+Screenshot placeholder: `docs/screenshots/hiring-predictor.png`
+
+Purpose:
+
+- candidate-level probability scoring
+- merit and connection input controls
+- model explanation and contribution breakdown
+
+---
+
+### Promotion Predictor
+
+Screenshot placeholder: `docs/screenshots/promotion-predictor.png`
+
+Purpose:
+
+- employee-level promotion scoring
+- performance and connection input controls
+- probability explanation and feature contribution output
+
+---
+
+### Data Summary
+
+Screenshot placeholder: `docs/screenshots/data-summary.png`
+
+Purpose:
+
+- dataset overview
+- scenario metrics
+- side-by-side scenario comparisons
+- chart-based summary of hiring and employee characteristics
+
+---
+
+### Risk Dashboard
+
+Screenshot placeholder: `docs/screenshots/risk-dashboard.png`
+
+Purpose:
+
+- top risky managers
+- top risky departments
+- suspicious hires
+- suspicious promotions
+- network and anomaly summaries
+
+---
+
+### Statistical Analysis
+
+Screenshot placeholder: `docs/screenshots/statistical-analysis.png`
+
+Purpose:
+
+- matched-pair comparisons
+- one-variable-at-a-time sensitivity curves
+- model behavior interpretation
+
+---
+
+### Organizational Impact
+
+Screenshot placeholder: `docs/screenshots/organizational-impact.png`
+
+Purpose:
+
+- cross-scenario comparison of hiring quality
+- promotion fairness comparison
+- efficiency proxy comparison
+- structural risk comparison
+
+---
+
+## Analytical Framework
 
 ### 1. Hiring Model
 
-Predicts hiring probability from merit indicators, connection indicators, and discretionary recruitment channels.
-
-Typical inputs include:
+The hiring model estimates candidate selection probability using combinations of:
 
 - education level
-- GPA and test/interview scores
-- experience
-- referral and family-link signals
+- GPA and assessment scores
+- interview performance
+- years of experience
+- referral and relationship indicators
 - connection strength
-- discretionary channel indicators
+- discretionary recruitment channels
+
+This model supports both predictive use in the web interface and analytical comparison across HR scenarios.
 
 ### 2. Promotion Model
 
-Predicts promotion probability from performance, tenure, role context, salary, experience, and connection-related features.
+The promotion model estimates employee promotion probability using:
+
+- performance score
+- tenure
+- role level
+- salary context
+- years of experience
+- connection indicators
+- discretionary advancement signals
 
 ### 3. Network Nepotism Risk Model
 
-Produces manager-level and department-level risk scores from concentration and connectedness patterns in the employee population.
+This model evaluates structural exposure by generating manager-level and department-level risk scores from concentration and connectedness patterns in the employee population.
 
-### 4. Suspicious Decision / Anomaly Model
+It is intended to capture organizational structure, not only individual prediction.
 
-Flags suspicious hires and promotions where low merit or low performance appears alongside strong connection indicators or discretionary routing.
+### 4. Suspicious Decision Scoring
+
+The anomaly layer highlights suspicious hires and promotions in cases where weak merit or weak performance appears alongside stronger connection-related indicators.
+
+This makes the system useful not only for prediction, but also for audit-style analytical review.
+
+---
 
 ## Scenario Design
 
-The current analytics pipeline compares three organizational regimes:
+The current pipeline compares three regimes with different decision logic:
 
-- **Merit-based**: merit dominates hiring and promotion decisions
-- **Moderate favoritism**: merit still matters, but connected profiles gain partial advantage
-- **High nepotism risk**: connection and relationship signals exert a strong decision influence
+### Merit-based
 
-These scenarios allow the project to compare fairness, efficiency, and structural exposure under different governance assumptions.
+- hiring is driven primarily by merit
+- promotion is driven primarily by performance and tenure
+- connection effects are weak
 
-## Application Modules
+### Moderate favoritism
 
-The local web application currently exposes the following product surfaces:
+- merit remains important
+- connected candidates and employees gain some advantage
+- organizational quality begins to diverge from purely merit-based outcomes
 
-- **Dashboard**: KPI overview and cross-model orientation
-- **Hiring Predictor**: single-record candidate probability scoring
-- **Promotion Predictor**: single-record employee promotion scoring
-- **Data Summary**: dataset dimensions, scenario metrics, and scenario comparison tables
-- **Risk Dashboard**: top risky managers, top risky departments, suspicious hires, and suspicious promotions
-- **Statistical Analysis**: matched-pair comparisons and one-variable-at-a-time sensitivity curves
-- **Organizational Impact**: scenario-level comparison of hiring quality, promotion fairness, efficiency, and structural risk
+### High nepotism risk
+
+- relationship signals exert strong influence
+- connected profiles gain outsized advantage
+- structural concentration and suspicious outcomes increase materially
+
+These scenarios change the data-generating process itself rather than simply acting as labels.
+
+---
+
+## Web Application Modules
+
+The local product currently includes:
+
+- **Dashboard**: high-level orientation and KPI summary
+- **Hiring Predictor**: candidate-level prediction workflow
+- **Promotion Predictor**: employee-level prediction workflow
+- **Data Summary**: descriptive and comparative scenario view
+- **Risk Dashboard**: structural risk and suspicious-case review
+- **Statistical Analysis**: matched-pair interpretation and sensitivity analysis
+- **Organizational Impact**: comparative quality, fairness, efficiency, and risk outcomes
+
+---
 
 ## Repository Structure
 
 ```text
 .
-|-- app_utils/                 Helper modules used by the web application
+|-- app_utils/                 Shared helper layer for the app and analytics views
 |-- artifacts/
 |   `-- predictor_models/      Persisted hiring and promotion bundles
-|-- backend/                   FastAPI backend
+|-- backend/                   FastAPI service layer
 |-- data/
 |   |-- generated/             Synthetic source workbook
-|   `-- processed/             Model-ready CSV datasets
-|-- docs/                      Project notes, roadmap, and screenshot placeholders
+|   `-- processed/             Model-ready datasets
+|-- docs/                      Notes, roadmap references, and screenshot placeholders
 |-- frontend/                  Static frontend served by FastAPI
 |-- outputs/
-|   |-- anomaly_model/         Suspicious-case outputs and scenario anomaly summaries
+|   |-- anomaly_model/         Suspicious-case outputs and anomaly summaries
 |   |-- hiring_model/          Hiring metrics, predictions, coefficients, and plots
-|   |-- network_model/         Manager/department risk outputs
+|   |-- network_model/         Structural risk outputs
 |   `-- promotion_model/       Promotion metrics, predictions, coefficients, and plots
-|-- src/                       Data generation and modeling pipeline
+|-- src/                       Core data generation and modeling scripts
 |-- requirements.txt
 `-- Run_Nepotism_Web_App.bat
 ```
+
+---
 
 ## Technology Stack
 
@@ -132,13 +276,16 @@ The local web application currently exposes the following product surfaces:
 - openpyxl
 - networkx
 - Faker
-- Vanilla JavaScript and CSS frontend
+- Vanilla JavaScript
+- CSS
+
+---
 
 ## Getting Started
 
 ### Prerequisites
 
-- Python 3.11+ recommended
+- Python 3.11 or newer recommended
 - Windows environment for the included launcher script
 
 ### Installation
@@ -149,7 +296,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-### Run The Web Application
+### Run the Web Application
 
 Option 1:
 
@@ -169,38 +316,53 @@ Then open:
 http://127.0.0.1:8000
 ```
 
-## Data And Modeling Workflow
+---
 
-The project currently follows this workflow:
+## Data and Modeling Workflow
+
+The current workflow is:
 
 1. Generate synthetic candidate and employee data under multiple HR regimes
-2. Prepare model-ready candidate, employee, manager, and department datasets
-3. Train and evaluate hiring and promotion models
-4. Compute network nepotism risk scores
+2. Prepare processed datasets and engineered features
+3. Fit and evaluate hiring and promotion models
+4. Compute structural manager and department risk scores
 5. Score suspicious hiring and promotion outcomes
-6. Serve the analytical surfaces through the local FastAPI web application
+6. Serve the outputs through the local web application
+
+---
 
 ## Analytical Outputs
 
-The repository already includes generated outputs for demonstration and inspection, including:
+The repository already includes saved outputs for demonstration and inspection, including:
 
-- hiring and promotion metrics
-- explanatory coefficients and inference tables
+- hiring metrics
+- promotion metrics
+- explanatory coefficient tables
 - candidate and employee prediction outputs
 - ROC and precision-recall charts
-- ranked risky managers and departments
+- risky manager and department rankings
 - suspicious hires and suspicious promotions
 - scenario-level anomaly summaries
 
-## Professional Use Cases
+These artifacts make the repository presentation-ready even without rerunning the full pipeline immediately.
 
-This project is well suited for:
+---
 
-- analytics engineering portfolios
-- operations research and industrial engineering demonstrations
-- HR analytics capstone presentations
-- model interpretability and fairness case studies
-- governance, compliance, or audit prototyping discussions
+## Interpretation and Research Value
+
+This system is intended as a decision-support and analytical experimentation platform.
+
+Its value comes from combining:
+
+- synthetic scenario design
+- predictive modeling
+- structural concentration scoring
+- suspicious-case detection
+- comparative organizational interpretation
+
+Rather than treating favoritism as a purely descriptive concept, the platform operationalizes it into measurable analytical outputs that can be compared under controlled scenario assumptions.
+
+---
 
 ## Roadmap
 
@@ -208,20 +370,26 @@ Planned next steps include:
 
 - batch upload and export workflows for prediction pages
 - deeper filtering and exploration in the web interface
-- expanded dashboard controls for risk and anomaly analysis
-- a full multi-period workforce simulation engine based on the design documented in `docs/simulation.txt`
+- expanded dashboard controls for structural risk and suspicious-case inspection
+- a full multi-period workforce simulation engine based on the design in `docs/simulation.txt`
+
+---
 
 ## Important Notes
 
-- The data is synthetic and intended for analytical experimentation and product demonstration.
-- The current app is a local product surface, not a hosted SaaS deployment.
-- Some legacy anomaly artifacts remain in `outputs/anomaly_model/`; the current analytics workflow should be interpreted using the files generated by the active scripts and helpers.
+- The data in this repository is synthetic and intended for analytical experimentation and demonstration.
+- The current application is a local product surface, not a hosted production deployment.
+- Some files in `outputs/anomaly_model/` reflect legacy artifacts from earlier iterations and should be interpreted alongside the current active pipeline.
+
+---
 
 ## Author
 
-**Yoav Nesher**  
-Industrial Engineering and Management
+**yoavne26-hub**  
+yoavne26@gmail.com
+
+---
 
 ## License
 
-This repository does not currently include a license file. Add one before public reuse or commercial distribution if you want to define usage terms explicitly.
+This repository does not currently include a license file. Add one before broader public reuse if you want to define explicit usage terms.
