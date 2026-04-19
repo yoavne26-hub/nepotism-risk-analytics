@@ -75,6 +75,55 @@ Data Generation -> Data Preparation -> Hiring Model -> Promotion Model -> Networ
 
 ---
 
+## Research Framing
+
+### Research Question
+
+This project is built around one central question:
+
+**How can nepotism and favoritism in hiring and promotion be modeled in a way that is measurable, interpretable, and useful for organizational analysis?**
+
+More specifically, the project examines whether relationship-based signals can distort hiring and promotion decisions, how these patterns accumulate inside teams and departments, and how they may affect fairness, workforce quality, and organizational outcomes.
+
+---
+
+## Research Basis
+
+The design of this project was influenced by several ideas from the literature.
+
+First, nepotism is difficult to observe directly because hiring and promotion decisions are often subjective and partially hidden. For that reason, many studies rely on **proxy-based measurement**, especially kinship ties, shared surnames, and concentration patterns within organizations. :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}
+
+Second, research on patronage and public-sector selection shows that when decision-makers have discretion, political or personal connections can substitute for competence. That idea directly shaped the hiring and promotion models in this project, where connection-related variables are modeled alongside merit variables. :contentReference[oaicite:2]{index=2}
+
+Third, corruption and governance analytics literature emphasizes that these problems should be studied through **multiple indicators together**, not through a single red flag. That is why this repository combines predictive models, structural risk scores, anomaly detection, and scenario comparison rather than relying on only one metric. :contentReference[oaicite:3]{index=3}
+
+---
+
+## Sources and Contribution to the Project
+
+The main sources contributed to the project in different ways:
+
+- **Kinship in Public Office** helped frame family connectivity as a practical proxy for hidden favoritism and influenced the use of family-link variables and connected-employee concentration. :contentReference[oaicite:4]{index=4}
+- **Measuring Nepotism through Shared Last Names** supported using surname overlap as a weaker statistical warning signal in the structural risk layer. :contentReference[oaicite:5]{index=5}
+- **Patronage and Selection in Public Sector Organizations** shaped the idea that discretion can allow connections to replace competence in hiring and advancement. :contentReference[oaicite:6]{index=6}
+- **The Government Analytics Handbook** reinforced the decision to build a multi-indicator framework combining personnel signals, structural scores, and analytical diagnostics. :contentReference[oaicite:7]{index=7}
+- Broader literature on nepotism and talent acquisition helped connect the modeling work to organizational consequences such as weaker talent selection, blocked advancement, and reduced fairness. :contentReference[oaicite:8]{index=8}
+
+---
+
+## From Literature to Models
+
+This research framing is reflected in the four-model structure of the repository:
+
+- **Hiring Model** — measures the extent to which hiring is driven by merit versus connection-related advantage
+- **Promotion Model** — evaluates whether advancement remains performance-based or is distorted by favoritism
+- **Network Nepotism Risk Model** — scores managers and departments based on structural concentration of suspicious relational patterns
+- **Anomaly Detection Model** — identifies unusual manager- or department-level patterns that may indicate elevated HR risk
+
+Together, these models turn nepotism from a purely qualitative concern into a measurable HR analytics problem.
+
+---
+
 ## Application Walkthrough
 
 The current product surface is designed as a lightweight local analytics platform rather than a notebook-only research artifact. The screenshots below show the primary workflows and analytical outputs exposed through the web application.
