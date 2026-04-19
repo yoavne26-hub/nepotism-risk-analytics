@@ -91,11 +91,11 @@ More specifically, the project examines whether relationship-based signals can d
 
 The design of this project was influenced by several ideas from the literature.
 
-First, nepotism is difficult to observe directly because hiring and promotion decisions are often subjective and partially hidden. For that reason, many studies rely on **proxy-based measurement**, especially kinship ties, shared surnames, and concentration patterns within organizations. :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}
+First, nepotism is difficult to observe directly because hiring and promotion decisions are often subjective and partially hidden. For that reason, many studies rely on **proxy-based measurement**, especially kinship ties, shared surnames, and concentration patterns within organizations. 
 
-Second, research on patronage and public-sector selection shows that when decision-makers have discretion, political or personal connections can substitute for competence. That idea directly shaped the hiring and promotion models in this project, where connection-related variables are modeled alongside merit variables. :contentReference[oaicite:2]{index=2}
+Second, research on patronage and public-sector selection shows that when decision-makers have discretion, political or personal connections can substitute for competence. That idea directly shaped the hiring and promotion models in this project, where connection-related variables are modeled alongside merit variables. 
 
-Third, corruption and governance analytics literature emphasizes that these problems should be studied through **multiple indicators together**, not through a single red flag. That is why this repository combines predictive models, structural risk scores, anomaly detection, and scenario comparison rather than relying on only one metric. :contentReference[oaicite:3]{index=3}
+Third, corruption and governance analytics literature emphasizes that these problems should be studied through **multiple indicators together**, not through a single red flag. That is why this repository combines predictive models, structural risk scores, anomaly detection, and scenario comparison rather than relying on only one metric. 
 
 ---
 
@@ -103,11 +103,11 @@ Third, corruption and governance analytics literature emphasizes that these prob
 
 The main sources contributed to the project in different ways:
 
-- **Kinship in Public Office** helped frame family connectivity as a practical proxy for hidden favoritism and influenced the use of family-link variables and connected-employee concentration. :contentReference[oaicite:4]{index=4}
-- **Measuring Nepotism through Shared Last Names** supported using surname overlap as a weaker statistical warning signal in the structural risk layer. :contentReference[oaicite:5]{index=5}
-- **Patronage and Selection in Public Sector Organizations** shaped the idea that discretion can allow connections to replace competence in hiring and advancement. :contentReference[oaicite:6]{index=6}
-- **The Government Analytics Handbook** reinforced the decision to build a multi-indicator framework combining personnel signals, structural scores, and analytical diagnostics. :contentReference[oaicite:7]{index=7}
-- Broader literature on nepotism and talent acquisition helped connect the modeling work to organizational consequences such as weaker talent selection, blocked advancement, and reduced fairness. :contentReference[oaicite:8]{index=8}
+- **Kinship in Public Office** helped frame family connectivity as a practical proxy for hidden favoritism and influenced the use of family-link variables and connected-employee concentration. 
+- **Measuring Nepotism through Shared Last Names** supported using surname overlap as a weaker statistical warning signal in the structural risk layer. 
+- **Patronage and Selection in Public Sector Organizations** shaped the idea that discretion can allow connections to replace competence in hiring and advancement. 
+- **The Government Analytics Handbook** reinforced the decision to build a multi-indicator framework combining personnel signals, structural scores, and analytical diagnostics. 
+- Broader literature on nepotism and talent acquisition helped connect the modeling work to organizational consequences such as weaker talent selection, blocked advancement, and reduced fairness. 
 
 ---
 
