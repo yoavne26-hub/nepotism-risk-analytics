@@ -43,6 +43,11 @@ PAIR_SEARCH_SETTINGS = {
 }
 
 SENSITIVITY_GRID_SIZE = 15
+SCENARIO_PAIR_PRIORITY = {
+    "High nepotism risk": 0,
+    "Moderate favoritism": 1,
+    "Merit-based": 2,
+}
 
 
 def _get_module(task: str):
@@ -118,6 +123,31 @@ def _select_non_overlapping_pairs(pairs: pd.DataFrame, left_id_col: str, right_i
         if len(chosen_rows) >= max_pairs:
             break
     return pd.DataFrame(chosen_rows)
+
+
+def _order_selected_pairs(selected: pd.DataFrame) -> pd.DataFrame:
+    if selected.empty:
+        return selected
+
+    ordered = selected.copy()
+    scenario_series = ordered.get("scenario_merit")
+    if scenario_series is None:
+        scenario_series = ordered.get("scenario_connection")
+
+    ordered["scenario_priority"] = scenario_series.map(
+        lambda value: SCENARIO_PAIR_PRIORITY.get(str(value), len(SCENARIO_PAIR_PRIORITY))
+    )
+    sort_columns = ["scenario_priority"]
+    ascending = [True]
+    if "pair_score" in ordered.columns:
+        sort_columns.append("pair_score")
+        ascending.append(False)
+    if "probability_gap" in ordered.columns:
+        sort_columns.append("probability_gap")
+        ascending.append(True)
+
+    ordered = ordered.sort_values(sort_columns, ascending=ascending).reset_index(drop=True)
+    return ordered.drop(columns=["scenario_priority"], errors="ignore")
 
 
 def _pair_search_columns(task: str) -> tuple[str, str]:
@@ -259,6 +289,7 @@ def _find_contrasting_pairs_cached(task: str, model_name: str, max_pairs: int = 
         ).reset_index(drop=True)
         selected = _select_non_overlapping_pairs(merged, "merit_profile_id", "connection_profile_id", max_pairs)
         if not selected.empty:
+            selected = _order_selected_pairs(selected)
             relaxed = index > 0
             note = (
                 "Strong same-scenario matched pairs were found under the strict search criteria."

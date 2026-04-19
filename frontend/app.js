@@ -386,7 +386,7 @@ function renderHiring() {
             <div class="form-field full">
               <label class="form-label">Recruitment Channel</label>
               <select class="form-select" name="discretionary_channel">
-                ${channels.map(c => `<option value="${c}">${c}</option>`).join('')}
+                ${channels.map(c => `<option value="${c}" ${c === 'none' ? 'selected' : ''}>${c}</option>`).join('')}
               </select>
             </div>
             <div class="form-field full">
@@ -500,7 +500,7 @@ function renderPromotion() {
             <div class="form-field full">
               <label class="form-label">Recruitment Channel</label>
               <select class="form-select" name="discretionary_channel">
-                ${channels.map(c => `<option value="${c}">${c}</option>`).join('')}
+                ${channels.map(c => `<option value="${c}" ${c === 'none' ? 'selected' : ''}>${c}</option>`).join('')}
               </select>
             </div>
             <div class="form-field full">
