@@ -44,6 +44,17 @@ The system currently evaluates three HR regimes:
 
 ---
 
+## Product Highlights
+
+- Scenario-driven synthetic HR analytics pipeline spanning hiring, promotion, structural risk, and suspicious-case detection
+- Local web application for prediction, analytical review, and cross-scenario comparison
+- Persisted predictor bundles for fast startup without retraining on each launch
+- Manager-level and department-level structural nepotism risk scoring
+- Matched-pair and sensitivity analysis for model interpretability
+- Organizational impact comparison across fairness, quality, efficiency, and structural exposure dimensions
+
+---
+
 ## System Architecture
 
 Data Generation -> Data Preparation -> Hiring Model -> Promotion Model -> Network Risk Model -> Suspicious Decision Scoring -> FastAPI Backend -> Web Dashboard
@@ -64,95 +75,87 @@ Data Generation -> Data Preparation -> Hiring Model -> Promotion Model -> Networ
 
 ---
 
-## Interface and Visualization
+## Application Walkthrough
 
-The application currently includes several product-facing views. Add screenshots to `docs/screenshots/` using the suggested names below.
+The current product surface is designed as a lightweight local analytics platform rather than a notebook-only research artifact. The screenshots below show the primary workflows and analytical outputs exposed through the web application.
 
-### Home Screen
+### Dashboard
 
-Screenshot placeholder: `docs/screenshots/dashboard-overview.png`
+![Dashboard Overview](docs/screenshots/dashboard.png)
 
-Purpose:
-
-- product entry point
-- KPI overview
-- analytical model orientation
+The dashboard acts as the product entry point, presenting the analytical scope of the platform through KPI cards, high-level scenario comparisons, and direct orientation across the four core model layers.
 
 ---
 
 ### Hiring Predictor
 
-Screenshot placeholder: `docs/screenshots/hiring-predictor.png`
+![Hiring Predictor Overview](docs/screenshots/hiring1.png)
 
-Purpose:
+![Hiring Predictor Result Detail](docs/screenshots/hiring2.png)
 
-- candidate-level probability scoring
-- merit and connection input controls
-- model explanation and contribution breakdown
+The hiring workflow provides candidate-level probability scoring using merit, connection, and discretionary-channel inputs. It is designed to support both demonstration and interpretability by combining live prediction with an explanation layer for the resulting decision profile.
 
 ---
 
 ### Promotion Predictor
 
-Screenshot placeholder: `docs/screenshots/promotion-predictor.png`
+![Promotion Predictor Overview](docs/screenshots/promotion1.png)
 
-Purpose:
+![Promotion Predictor Result Detail](docs/screenshots/promotion2.png)
 
-- employee-level promotion scoring
-- performance and connection input controls
-- probability explanation and feature contribution output
+The promotion workflow mirrors the hiring predictor but shifts the decision context to employee performance, tenure, role, salary, and connection signals. This keeps the user experience consistent while reflecting the different structure of internal advancement decisions.
 
 ---
 
 ### Data Summary
 
-Screenshot placeholder: `docs/screenshots/data-summary.png`
+![Data Summary Overview](docs/screenshots/data1.png)
 
-Purpose:
+![Data Summary Scenario Comparison](docs/screenshots/data2.png)
 
-- dataset overview
-- scenario metrics
-- side-by-side scenario comparisons
-- chart-based summary of hiring and employee characteristics
+![Data Summary Difference Table](docs/screenshots/data3.png)
+
+The Data Summary page provides a descriptive foundation for the rest of the application. It combines dataset dimensions, scenario-level metrics, comparative tables, and visual summaries so users can understand how the synthetic HR regimes differ before interpreting model outputs.
 
 ---
 
 ### Risk Dashboard
 
-Screenshot placeholder: `docs/screenshots/risk-dashboard.png`
+![Risk Dashboard Structural Model View](docs/screenshots/model1.png)
 
-Purpose:
+![Risk Dashboard Suspicious Case View](docs/screenshots/model2.png)
 
-- top risky managers
-- top risky departments
-- suspicious hires
-- suspicious promotions
-- network and anomaly summaries
+The Risk Dashboard focuses on Model 3 and Model 4 outputs. It surfaces structural concentration patterns at manager and department level while also highlighting suspicious hires and promotions for audit-style analytical review.
 
 ---
 
 ### Statistical Analysis
 
-Screenshot placeholder: `docs/screenshots/statistical-analysis.png`
+![Statistical Analysis Sensitivity View](docs/screenshots/statistics1.png)
 
-Purpose:
+![Statistical Analysis Additional View](docs/screenshots/statistics2.png)
 
-- matched-pair comparisons
-- one-variable-at-a-time sensitivity curves
-- model behavior interpretation
+![Statistical Analysis Comparison View](docs/screenshots/statistics3.png)
+
+![Statistical Analysis Matched Pairs](docs/screenshots/statistics4.png)
+
+The Statistical Analysis view adds model-behavior interpretation on top of prediction and ranking outputs. It uses matched pairs and one-variable-at-a-time sensitivity curves to show how similar predicted probabilities can arise from very different merit and connection profiles.
 
 ---
 
 ### Organizational Impact
 
-Screenshot placeholder: `docs/screenshots/organizational-impact.png`
+![Organizational Impact Executive Overview](docs/screenshots/impact1.png)
 
-Purpose:
+![Organizational Impact Hiring Quality](docs/screenshots/impact2.png)
 
-- cross-scenario comparison of hiring quality
-- promotion fairness comparison
-- efficiency proxy comparison
-- structural risk comparison
+![Organizational Impact Promotion Fairness](docs/screenshots/impact3.png)
+
+![Organizational Impact Coefficient Analysis 1](docs/screenshots/impact4.png)
+
+![Organizational Impact Coefficient Analysis 2](docs/screenshots/impact5.png)
+
+The Organizational Impact page translates model outputs into scenario-level business and governance consequences. It compares hiring quality, promotion fairness, proxy efficiency, structural risk, and explanatory coefficient results in one integrated decision-support surface.
 
 ---
 
@@ -249,7 +252,7 @@ The local product currently includes:
 |-- data/
 |   |-- generated/             Synthetic source workbook
 |   `-- processed/             Model-ready datasets
-|-- docs/                      Notes, roadmap references, and screenshot placeholders
+|-- docs/                      Notes, roadmap references, and application screenshots
 |-- frontend/                  Static frontend served by FastAPI
 |-- outputs/
 |   |-- anomaly_model/         Suspicious-case outputs and anomaly summaries
@@ -303,6 +306,8 @@ Option 1:
 ```powershell
 .\Run_Nepotism_Web_App.bat
 ```
+
+This launcher starts the FastAPI server and opens the application in Chrome, or in the default browser if Chrome is not available in a standard Windows install path.
 
 Option 2:
 
@@ -386,10 +391,8 @@ Planned next steps include:
 ## Author
 
 **yoavne26-hub**  
-yoavne26@gmail.com
+yoavne26@gmail.com  
+[LinkedIn](https://www.linkedin.com/in/yoav-nesher)
 
 ---
 
-## License
-
-This repository does not currently include a license file. Add one before broader public reuse if you want to define explicit usage terms.
