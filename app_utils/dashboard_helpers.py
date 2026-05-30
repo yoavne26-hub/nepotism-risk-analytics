@@ -24,8 +24,6 @@ OUTPUT_PATHS = {
     "promotion_summary": PROJECT_ROOT / "outputs" / "anomaly_model" / "promotion_anomaly_rate_by_scenario.csv",
     "hiring_chart": PROJECT_ROOT / "outputs" / "anomaly_model" / "hiring_anomaly_scores.png",
     "promotion_chart": PROJECT_ROOT / "outputs" / "anomaly_model" / "promotion_anomaly_scores.png",
-    "legacy_manager_anomaly": PROJECT_ROOT / "outputs" / "anomaly_model" / "manager_anomaly_scores.csv",
-    "legacy_department_anomaly": PROJECT_ROOT / "outputs" / "anomaly_model" / "department_anomaly_scores.csv",
 }
 
 
@@ -54,16 +52,6 @@ def _safe_read_csv(path: Path, warnings: list[str]) -> pd.DataFrame | None:
         return None
 
 
-def _optional_read_csv(path: Path, warnings: list[str]) -> pd.DataFrame | None:
-    if not path.exists():
-        return None
-    try:
-        return pd.read_csv(path)
-    except Exception as exc:
-        warnings.append(f"Could not read optional file `{path.relative_to(PROJECT_ROOT)}`: {exc}")
-        return None
-
-
 @lru_cache(maxsize=1)
 def load_dashboard_bundle_core() -> DashboardBundle:
     warnings: list[str] = []
@@ -86,17 +74,6 @@ def load_dashboard_bundle_core() -> DashboardBundle:
         frame = _safe_read_csv(OUTPUT_PATHS[key], warnings)
         if frame is not None:
             frames[key] = frame
-
-    for key in ("legacy_manager_anomaly", "legacy_department_anomaly"):
-        frame = _optional_read_csv(OUTPUT_PATHS[key], warnings)
-        if frame is not None:
-            frames[key] = frame
-
-    if "legacy_manager_anomaly" in frames or "legacy_department_anomaly" in frames:
-        notes.append(
-            "Legacy manager/department anomaly files were detected in `outputs/anomaly_model/`, but the current "
-            "`src/model_anomaly.py` produces person-level suspicious hires and promotions only."
-        )
 
     image_paths = {
         key: path

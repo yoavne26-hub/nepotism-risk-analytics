@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderOrganizationalImpact();
   } catch (error) {
     console.error('Initialization error:', error);
-    document.querySelector('.views-container').innerHTML = `
+    document.querySelector('.main-content').insertAdjacentHTML('beforeend', `
       <div class="alert error">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="10"/>
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         </svg>
         <span>Failed to initialize the application. Please check that the backend server is running.</span>
       </div>
-    `;
+    `);
   }
   showLoading(false);
 });
@@ -60,8 +60,20 @@ function setupNavigation() {
       button.classList.add('active');
       const viewId = `${button.dataset.view}-view`;
       document.getElementById(viewId).classList.add('active');
+      updateWorkspaceChrome(button.dataset.view);
     });
   });
+
+  document.getElementById('refresh-data-btn')?.addEventListener('click', refreshData);
+  updateWorkspaceChrome('home');
+}
+
+function updateWorkspaceChrome(viewName) {
+  const meta = pageMeta[viewName] || pageMeta.home;
+  const section = document.getElementById('current-section');
+  const subtitle = document.getElementById('current-subtitle');
+  if (section) section.textContent = meta.title;
+  if (subtitle) subtitle.textContent = meta.subtitle;
 }
 
 async function loadInitialData() {
@@ -103,6 +115,180 @@ function refreshData() {
   }).catch(() => {
     showLoading(false);
   });
+}
+
+function createChart(canvas, config) {
+  if (!window.Chart) {
+    drawLiteChart(canvas, config);
+    return { destroy() {} };
+  }
+  return new window.Chart(canvas, config);
+}
+
+function drawLiteChart(canvas, config) {
+  if (!canvas?.getContext) return;
+  const container = canvas.closest('.chart-container, .sens-chart-container');
+  const rect = container?.getBoundingClientRect();
+  const width = Math.max(360, Math.floor(rect?.width || 640));
+  const height = Math.max(220, Math.floor(rect?.height || 300));
+  const ratio = window.devicePixelRatio || 1;
+  canvas.width = width * ratio;
+  canvas.height = height * ratio;
+  canvas.style.width = `${width}px`;
+  canvas.style.height = `${height}px`;
+
+  const ctx = canvas.getContext('2d');
+  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+  ctx.clearRect(0, 0, width, height);
+  ctx.fillStyle = '#f8fafc';
+  ctx.fillRect(0, 0, width, height);
+
+  const type = config?.type || 'bar';
+  const labels = config?.data?.labels || [];
+  const datasets = config?.data?.datasets || [];
+  if (!datasets.length) return;
+
+  if (type === 'doughnut' || type === 'polarArea') {
+    drawLiteRadialChart(ctx, width, height, labels, datasets[0]);
+    return;
+  }
+
+  drawLiteCartesianChart(ctx, width, height, labels, datasets, type);
+}
+
+function drawLiteCartesianChart(ctx, width, height, labels, datasets, type) {
+  const margin = { top: 22, right: 18, bottom: 46, left: 48 };
+  const plotW = width - margin.left - margin.right;
+  const plotH = height - margin.top - margin.bottom;
+  const values = datasets.flatMap((dataset) => dataset.data.map(Number).filter(Number.isFinite));
+  const max = Math.max(1, ...values) * 1.18;
+  const min = Math.min(0, ...values);
+  const xStep = plotW / Math.max(1, labels.length);
+  const yScale = (value) => margin.top + plotH - ((Number(value) - min) / (max - min || 1)) * plotH;
+
+  ctx.strokeStyle = '#e2e8f0';
+  ctx.lineWidth = 1;
+  ctx.font = '11px Inter, system-ui, sans-serif';
+  ctx.fillStyle = '#667085';
+
+  for (let i = 0; i <= 4; i += 1) {
+    const y = margin.top + (plotH / 4) * i;
+    ctx.beginPath();
+    ctx.moveTo(margin.left, y);
+    ctx.lineTo(width - margin.right, y);
+    ctx.stroke();
+  }
+
+  labels.forEach((label, i) => {
+    const x = margin.left + xStep * i + xStep / 2;
+    ctx.fillText(String(label).slice(0, 18), x - xStep * 0.36, height - 18);
+  });
+
+  if (type === 'line') {
+    datasets.forEach((dataset, datasetIndex) => {
+      const color = getLiteColor(dataset, datasetIndex);
+      ctx.strokeStyle = color;
+      ctx.fillStyle = color;
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      dataset.data.forEach((value, i) => {
+        const x = margin.left + xStep * i + xStep / 2;
+        const y = yScale(value);
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.stroke();
+      dataset.data.forEach((value, i) => {
+        const x = margin.left + xStep * i + xStep / 2;
+        const y = yScale(value);
+        ctx.beginPath();
+        ctx.arc(x, y, 4, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    });
+  } else {
+    const groupWidth = Math.min(72, xStep * 0.72);
+    const barWidth = groupWidth / Math.max(1, datasets.length);
+    datasets.forEach((dataset, datasetIndex) => {
+      ctx.fillStyle = getLiteColor(dataset, datasetIndex);
+      dataset.data.forEach((value, i) => {
+        const x = margin.left + xStep * i + xStep / 2 - groupWidth / 2 + datasetIndex * barWidth;
+        const y = yScale(value);
+        const h = margin.top + plotH - y;
+        roundRect(ctx, x + 2, y, Math.max(6, barWidth - 4), Math.max(2, h), 5);
+        ctx.fill();
+      });
+    });
+  }
+
+  drawLiteLegend(ctx, width, datasets);
+}
+
+function drawLiteRadialChart(ctx, width, height, labels, dataset) {
+  const values = dataset.data.map(Number).filter(Number.isFinite);
+  const total = values.reduce((sum, value) => sum + Math.max(0, value), 0) || 1;
+  const radius = Math.min(width, height) * 0.28;
+  const cx = width * 0.38;
+  const cy = height * 0.5;
+  let angle = -Math.PI / 2;
+
+  values.forEach((value, i) => {
+    const slice = (Math.max(0, value) / total) * Math.PI * 2;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, radius, angle, angle + slice);
+    ctx.closePath();
+    ctx.fillStyle = getLiteColor(dataset, i);
+    ctx.fill();
+    angle += slice;
+  });
+
+  ctx.beginPath();
+  ctx.fillStyle = '#f8fafc';
+  ctx.arc(cx, cy, radius * 0.58, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.font = '12px Inter, system-ui, sans-serif';
+  labels.slice(0, 6).forEach((label, i) => {
+    const y = height * 0.32 + i * 24;
+    ctx.fillStyle = getLiteColor(dataset, i);
+    ctx.fillRect(width * 0.66, y - 10, 10, 10);
+    ctx.fillStyle = '#475467';
+    ctx.fillText(String(label).slice(0, 24), width * 0.66 + 18, y);
+  });
+}
+
+function drawLiteLegend(ctx, width, datasets) {
+  ctx.font = '11px Inter, system-ui, sans-serif';
+  let x = 48;
+  const y = 18;
+  datasets.forEach((dataset, i) => {
+    ctx.fillStyle = getLiteColor(dataset, i);
+    ctx.fillRect(x, y - 9, 10, 10);
+    ctx.fillStyle = '#475467';
+    const label = String(dataset.label || `Series ${i + 1}`);
+    ctx.fillText(label, x + 16, y);
+    x += Math.min(230, 24 + label.length * 7);
+    if (x > width - 180) x = 48;
+  });
+}
+
+function getLiteColor(dataset, index) {
+  const source = Array.isArray(dataset.backgroundColor)
+    ? dataset.backgroundColor[index % dataset.backgroundColor.length]
+    : dataset.borderColor || dataset.backgroundColor;
+  return String(source || ['#0f766e', '#2563eb', '#d97706', '#dc2626'][index % 4]).replace(/rgba\(([^,]+),([^,]+),([^,]+),[^)]+\)/, 'rgb($1,$2,$3)');
+}
+
+function roundRect(ctx, x, y, width, height, radius) {
+  const r = Math.min(radius, width / 2, height / 2);
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + width, y, x + width, y + height, r);
+  ctx.arcTo(x + width, y + height, x, y + height, r);
+  ctx.arcTo(x, y + height, x, y, r);
+  ctx.arcTo(x, y, x + width, y, r);
+  ctx.closePath();
 }
 
 function escapeHtml(value) {
@@ -266,7 +452,7 @@ function initializeHomeCharts() {
 
   const ctxScenario = document.getElementById('home-scenario-chart');
   if (ctxScenario && scenarioLabels.length) {
-    charts.homeScenario = new Chart(ctxScenario, {
+    charts.homeScenario = createChart(ctxScenario, {
       type: 'bar',
       data: {
         labels: scenarioLabels,
@@ -309,7 +495,7 @@ function initializeHomeCharts() {
 
   const ctxAnomaly = document.getElementById('home-anomaly-chart');
   if (ctxAnomaly && anomalyLabels.length) {
-    charts.homeAnomaly = new Chart(ctxAnomaly, {
+    charts.homeAnomaly = createChart(ctxAnomaly, {
       type: 'line',
       data: {
         labels: anomalyLabels,
@@ -863,14 +1049,6 @@ function renderComparisons() {
   const scenarios = rows.map(r => r.scenario);
   const scenarioColors = ['var(--success)', 'var(--warning)', 'var(--danger)'];
 
-  const legacyMetrics = [
-    { key: 'hiring_rate', label: 'Hiring Rate', format: '.1f', suffix: '%', icon: '👥' },
-    { key: 'promotion_rate', label: 'Promotion Rate', format: '.1f', suffix: '%', icon: '📈' },
-    { key: 'avg_candidate_merit', label: 'Avg Merit Score', format: '.2f', icon: '⭐' },
-    { key: 'avg_candidate_connection', label: 'Avg Connection', format: '.3f', icon: '🔗' },
-    { key: 'avg_performance', label: 'Avg Performance', format: '.2f', icon: '🎯' },
-    { key: 'avg_salary', label: 'Avg Salary', format: ',.0f', prefix: '$', icon: '💰' },
-  ];
   const metrics = [
     { key: 'hiring_rate_pct', label: 'Hiring Rate', format: '.1f', suffix: '%', icon: 'H' },
     { key: 'promotion_rate_pct', label: 'Promotion Rate', format: '.1f', suffix: '%', icon: 'P' },
@@ -923,7 +1101,7 @@ function initializeDataCharts() {
 
   const ctxHiring = document.getElementById('data-hiring-chart');
   if (ctxHiring) {
-    charts.dataHiring = new Chart(ctxHiring, {
+    charts.dataHiring = createChart(ctxHiring, {
       type: 'bar',
       data: {
         labels,
@@ -946,7 +1124,7 @@ function initializeDataCharts() {
 
   const ctxEmployee = document.getElementById('data-employee-chart');
   if (ctxEmployee) {
-    charts.dataEmployee = new Chart(ctxEmployee, {
+    charts.dataEmployee = createChart(ctxEmployee, {
       type: 'radar',
       data: {
         labels: labels.map(l => l.split(' ')[0]),
@@ -1072,7 +1250,7 @@ function initializeRiskCharts() {
 
   const ctxManager = document.getElementById('risk-manager-chart');
   if (ctxManager && managerData.length) {
-    charts.riskManager = new Chart(ctxManager, {
+    charts.riskManager = createChart(ctxManager, {
       type: 'bar',
       data: {
         labels: managerData.map(r => r.scenario),
@@ -1096,7 +1274,7 @@ function initializeRiskCharts() {
 
   const ctxDept = document.getElementById('risk-department-chart');
   if (ctxDept && deptData.length) {
-    charts.riskDepartment = new Chart(ctxDept, {
+    charts.riskDepartment = createChart(ctxDept, {
       type: 'bar',
       data: {
         labels: deptData.map(r => r.scenario),
@@ -1120,7 +1298,7 @@ function initializeRiskCharts() {
 
   const ctxAnomaly = document.getElementById('risk-anomaly-chart');
   if (ctxAnomaly && hiringAnomaly.length) {
-    charts.riskAnomaly = new Chart(ctxAnomaly, {
+    charts.riskAnomaly = createChart(ctxAnomaly, {
       type: 'bar',
       data: {
         labels: hiringAnomaly.map(r => r.scenario),
@@ -1407,7 +1585,7 @@ function initializeSensitivityCharts() {
     if (!canvas || !config.data?.curve?.length) return;
 
     const points = config.data.curve;
-    charts[`sens-${config.id}`] = new Chart(canvas, {
+    charts[`sens-${config.id}`] = createChart(canvas, {
       type: 'line',
       data: {
         labels: points.map(p => Number(p.x_value).toFixed(1)),
@@ -1527,7 +1705,7 @@ function initializeImpactCharts() {
 
   const ctxExec = document.getElementById('impact-executive-chart');
   if (ctxExec) {
-    charts.impactExecutive = new Chart(ctxExec, {
+    charts.impactExecutive = createChart(ctxExec, {
       type: 'bar',
       data: {
         labels: executive.map(r => r.Scenario || r.scenario),
@@ -1554,7 +1732,7 @@ function initializeImpactCharts() {
   const hiringQuality = impact.hiring_quality_series || {};
   const ctxHiring = document.getElementById('impact-hiring-chart');
   if (ctxHiring && hiringQuality.avg_hired_merit?.length) {
-    charts.impactHiring = new Chart(ctxHiring, {
+    charts.impactHiring = createChart(ctxHiring, {
       type: 'doughnut',
       data: {
         labels: hiringQuality.avg_hired_merit.map(r => r.scenario),
@@ -1576,7 +1754,7 @@ function initializeImpactCharts() {
   const promoFairness = impact.promotion_fairness_series || {};
   const ctxPromo = document.getElementById('impact-promotion-chart');
   if (ctxPromo && promoFairness.promotion_quality_ratio?.length) {
-    charts.impactPromotion = new Chart(ctxPromo, {
+    charts.impactPromotion = createChart(ctxPromo, {
       type: 'polarArea',
       data: {
         labels: promoFairness.promotion_quality_ratio.map(r => r.scenario),

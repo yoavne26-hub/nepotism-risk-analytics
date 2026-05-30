@@ -1,1 +1,1 @@
-"""FastAPI backend for the web migration of Nepotism Risk Analytics."""
+"""FastAPI backend for the Nepotism Risk Analytics web application."""

@@ -2,12 +2,19 @@
 setlocal
 
 cd /d "%~dp0"
-set "APP_URL=http://127.0.0.1:8000"
+set "APP_URL=http://127.0.0.1:8000/?ui=enterprise"
 set "HEALTH_URL=http://127.0.0.1:8000/api/health"
 set "CHROME_EXE="
 
 if not exist "backend\api.py" (
     echo Could not find backend\api.py in:
+    echo %CD%
+    pause
+    exit /b 1
+)
+
+if not exist "frontend\index.html" (
+    echo Could not find frontend\index.html in:
     echo %CD%
     pause
     exit /b 1
@@ -32,8 +39,8 @@ if exist "%ProgramFiles%\Google\Chrome\Application\chrome.exe" (
     set "CHROME_EXE=%LocalAppData%\Google\Chrome\Application\chrome.exe"
 )
 
-echo Starting Nepotism Risk Analytics web app...
-echo The web interface will be available at %APP_URL%
+echo Starting Nepotism Risk Analytics enterprise web app...
+echo The new analyst UI will be available at %APP_URL%
 echo.
 
 if defined CHROME_EXE (

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nepotism Risk Analytics</title>
-  <link rel="stylesheet" href="/static/styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="/static/styles.css?v=enterprise-ui">
+  <script async src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
         <div class="logo-icon">NR</div>
         <div class="logo-text">
           <span class="logo-title">Nepotism Risk Analytics</span>
-          <span class="logo-subtitle">HR Analytics Platform</span>
+          <span class="logo-subtitle">Enterprise HR Intelligence</span>
         </div>
       </div>
       <nav class="main-nav">
@@ -31,11 +31,27 @@
       </nav>
       <div class="header-status">
         <span class="status-indicator"></span>
-        Live
+        Live model data
       </div>
     </header>
 
     <main class="main-content">
+      <section class="command-bar" aria-label="Workspace controls">
+        <div>
+          <span class="workspace-label">Analytics workspace</span>
+          <h2 id="current-section">Dashboard</h2>
+          <p id="current-subtitle">Overview of all analytical models and key metrics</p>
+        </div>
+        <div class="command-actions">
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true"></span>
+            <input type="search" placeholder="Search models, metrics, scenarios">
+          </label>
+          <button class="ghost-btn" type="button">Export</button>
+          <button class="primary-action" type="button" id="refresh-data-btn">Refresh Data</button>
+        </div>
+      </section>
+
       <div id="home-view" class="page-view active"></div>
       <div id="hiring-view" class="page-view"></div>
       <div id="promotion-view" class="page-view"></div>
@@ -51,6 +67,6 @@
     <span>Loading...</span>
   </div>
 
-  <script src="/static/app.js"></script>
+  <script defer src="/static/app.js?v=enterprise-ui"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@ The repository combines:
 
 - a Python analytics pipeline
 - a FastAPI backend
-- a static frontend web application
+- a static enterprise-style analyst web application
 - exported model outputs and diagnostics
 
 The system currently evaluates three HR regimes:
@@ -47,7 +47,9 @@ The system currently evaluates three HR regimes:
 ## Product Highlights
 
 - Scenario-driven synthetic HR analytics pipeline spanning hiring, promotion, structural risk, and suspicious-case detection
-- Local web application for prediction, analytical review, and cross-scenario comparison
+- Enterprise-style local web application for prediction, analytical review, and cross-scenario comparison
+- Professional analyst workspace UI with sidebar navigation, command bar, KPI cards, charts, tables, and refreshed screenshots
+- `.bat` launcher that opens the current FastAPI-served frontend at `http://127.0.0.1:8000/?ui=enterprise`
 - Persisted predictor bundles for fast startup without retraining on each launch
 - Manager-level and department-level structural nepotism risk scoring
 - Matched-pair and sensitivity analysis for model interpretability
@@ -57,7 +59,7 @@ The system currently evaluates three HR regimes:
 
 ## System Architecture
 
-Data Generation -> Data Preparation -> Hiring Model -> Promotion Model -> Network Risk Model -> Suspicious Decision Scoring -> FastAPI Backend -> Web Dashboard
+Data Generation -> Data Preparation -> Hiring Model -> Promotion Model -> Network Risk Model -> Suspicious Decision Scoring -> FastAPI Backend -> Enterprise Analyst Web UI
 
 ### Core Components
 
@@ -69,8 +71,8 @@ Data Generation -> Data Preparation -> Hiring Model -> Promotion Model -> Networ
 | `src/model_promotion.py` | Trains and evaluates employee-level promotion models |
 | `src/model_network_nepotism.py` | Produces manager-level and department-level structural risk scores |
 | `src/model_anomaly.py` | Flags suspicious hires and promotions based on merit/performance mismatch and connection signals |
-| `backend/api.py` | Serves the local analytics web application through FastAPI |
-| `frontend/` | Static product interface for prediction, comparison, and inspection |
+| `backend/api.py` | Serves the FastAPI API and the static enterprise web application |
+| `frontend/` | Current product interface for prediction, comparison, inspection, and analyst dashboards |
 | `app_utils/` | Shared helper layer for prediction, aggregation, dashboard data, and explanatory analytics |
 
 ---
@@ -124,15 +126,17 @@ Together, these models turn nepotism from a purely qualitative concern into a me
 
 ---
 
-## Application Walkthrough
+## Enterprise Web Application
 
-The current product surface is designed as a lightweight local analytics platform rather than a notebook-only research artifact. The screenshots below show the primary workflows and analytical outputs exposed through the web application.
+The current product surface is a polished local analyst workspace rather than a notebook-only research artifact. The redesigned interface uses a fixed navigation rail, workspace command bar, KPI cards, production-style forms, chart panels, and data tables to make the project feel like a company analytics product for HR, compliance, and operations analysts.
+
+The screenshots below show the current frontend served by `backend/api.py` and opened by `Run_Nepotism_Web_App.bat`.
 
 ### Dashboard
 
 ![Dashboard Overview](docs/screenshots/dashboard.png)
 
-The dashboard acts as the product entry point, presenting the analytical scope of the platform through KPI cards, high-level scenario comparisons, and direct orientation across the four core model layers.
+The dashboard acts as the product entry point, presenting the analytical scope of the platform through enterprise KPI cards, high-level scenario comparisons, anomaly-rate charts, and direct orientation across the four core model layers.
 
 ---
 
@@ -142,7 +146,7 @@ The dashboard acts as the product entry point, presenting the analytical scope o
 
 ![Hiring Predictor Result Detail](docs/screenshots/hiring2.png)
 
-The hiring workflow provides candidate-level probability scoring using merit, connection, and discretionary-channel inputs. It is designed to support both demonstration and interpretability by combining live prediction with an explanation layer for the resulting decision profile.
+The hiring workflow provides candidate-level probability scoring using merit, connection, and discretionary-channel inputs. It combines a polished analyst form with live prediction output, driver explanations, model metadata, equation details, and coefficient contributions.
 
 ---
 
@@ -152,7 +156,7 @@ The hiring workflow provides candidate-level probability scoring using merit, co
 
 ![Promotion Predictor Result Detail](docs/screenshots/promotion2.png)
 
-The promotion workflow mirrors the hiring predictor but shifts the decision context to employee performance, tenure, role, salary, and connection signals. This keeps the user experience consistent while reflecting the different structure of internal advancement decisions.
+The promotion workflow mirrors the hiring predictor but shifts the decision context to employee performance, tenure, role, salary, and connection signals. The refreshed UI keeps the workflow consistent while separating the input panel from the prediction and explanation panel.
 
 ---
 
@@ -164,7 +168,7 @@ The promotion workflow mirrors the hiring predictor but shifts the decision cont
 
 ![Data Summary Difference Table](docs/screenshots/data3.png)
 
-The Data Summary page provides a descriptive foundation for the rest of the application. It combines dataset dimensions, scenario-level metrics, comparative tables, and visual summaries so users can understand how the synthetic HR regimes differ before interpreting model outputs.
+The Data Summary page provides a descriptive foundation for the rest of the application. It combines dataset dimensions, scenario-level metrics, comparative tables, and visual summaries in a dense but readable BI-style layout.
 
 ---
 
@@ -188,7 +192,7 @@ The Risk Dashboard focuses on Model 3 and Model 4 outputs. It surfaces structura
 
 ![Statistical Analysis Matched Pairs](docs/screenshots/statistics4.png)
 
-The Statistical Analysis view adds model-behavior interpretation on top of prediction and ranking outputs. It uses matched pairs and one-variable-at-a-time sensitivity curves to show how similar predicted probabilities can arise from very different merit and connection profiles.
+The Statistical Analysis view adds model-behavior interpretation on top of prediction and ranking outputs. It uses refreshed sensitivity panels, matched pairs, and one-variable-at-a-time curves to show how similar predicted probabilities can arise from very different merit and connection profiles.
 
 ---
 
@@ -301,8 +305,8 @@ The local product currently includes:
 |-- data/
 |   |-- generated/             Synthetic source workbook
 |   `-- processed/             Model-ready datasets
-|-- docs/                      Notes, roadmap references, and application screenshots
-|-- frontend/                  Static frontend served by FastAPI
+|-- docs/                      Notes, roadmap references, and refreshed application screenshots
+|-- frontend/                  Current enterprise analyst frontend served by FastAPI
 |-- outputs/
 |   |-- anomaly_model/         Suspicious-case outputs and anomaly summaries
 |   |-- hiring_model/          Hiring metrics, predictions, coefficients, and plots
@@ -310,7 +314,7 @@ The local product currently includes:
 |   `-- promotion_model/       Promotion metrics, predictions, coefficients, and plots
 |-- src/                       Core data generation and modeling scripts
 |-- requirements.txt
-`-- Run_Nepotism_Web_App.bat
+`-- Run_Nepotism_Web_App.bat   Windows launcher for the current web UI
 ```
 
 ---
@@ -350,13 +354,19 @@ pip install -r requirements.txt
 
 ### Run the Web Application
 
-Option 1:
+Option 1, recommended:
 
 ```powershell
 .\Run_Nepotism_Web_App.bat
 ```
 
-This launcher starts the FastAPI server and opens the application in Chrome, or in the default browser if Chrome is not available in a standard Windows install path.
+This launcher starts the FastAPI server from `backend.api`, waits for `/api/health`, and opens the redesigned analyst web interface at:
+
+```text
+http://127.0.0.1:8000/?ui=enterprise
+```
+
+Chrome is used when it is available in a standard Windows install path; otherwise the script opens the URL with the default browser. The root route is served by `frontend/index.html`, so running the batch file opens the current web design, not a legacy `app.py` or notebook interface.
 
 Option 2:
 
@@ -367,7 +377,7 @@ Option 2:
 Then open:
 
 ```text
-http://127.0.0.1:8000
+http://127.0.0.1:8000/?ui=enterprise
 ```
 
 ---
@@ -433,7 +443,7 @@ Planned next steps include:
 
 - The data in this repository is synthetic and intended for analytical experimentation and demonstration.
 - The current application is a local product surface, not a hosted production deployment.
-- Some files in `outputs/anomaly_model/` reflect legacy artifacts from earlier iterations and should be interpreted alongside the current active pipeline.
+- The active user interface is the FastAPI-served frontend in `frontend/`; legacy top-level app entry points have been removed to avoid launcher confusion.
 
 ---
 
@@ -444,4 +454,3 @@ yoavne26@gmail.com
 [LinkedIn](https://www.linkedin.com/in/yoav-nesher)
 
 ---
-

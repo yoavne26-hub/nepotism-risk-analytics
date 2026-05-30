@@ -112,7 +112,7 @@ class PromotionPredictionRequest(BaseModel):
 app = FastAPI(
     title="Nepotism Risk Analytics API",
     version="0.1.0",
-    description="Backend API for the web migration of Nepotism Risk Analytics.",
+    description="Backend API for the Nepotism Risk Analytics enterprise web application.",
 )
 app.add_middleware(
     CORSMiddleware,
@@ -251,13 +251,13 @@ def health() -> dict[str, str]:
 def get_home_meta() -> dict:
     return {
         "title": "Nepotism Risk Analytics",
-        "subtitle": "Backend + frontend migration shell",
+        "subtitle": "Enterprise HR intelligence workspace",
         "hero": {
-            "title": "Web frontend active",
+            "title": "Analyst workspace for HR fairness and risk",
             "body": (
-                "This interface keeps the core modeling logic in Python and moves the presentation layer to a web frontend. "
-                "The current migration slice includes Home, Hiring Predictor, Promotion Predictor, Data Summary, "
-                "Risk Dashboard, Statistical Analysis, and Organizational Impact."
+                "A product-style local web application for company analysts to inspect synthetic HR scenarios, "
+                "score hiring and promotion decisions, review structural nepotism risk, and compare organizational "
+                "outcomes across merit-based and relationship-driven regimes."
             ),
         },
         "pipeline": [
@@ -283,7 +283,7 @@ def get_home_meta() -> dict:
             },
         ],
         "migration_note": (
-            "The web frontend now covers the live predictor flow plus the analytical inspection pages: Data Summary, "
+            "The enterprise web UI covers the live predictor flow plus the analytical inspection pages: Data Summary, "
             "Risk Dashboard, Statistical Analysis, and Organizational Impact."
         ),
     }
